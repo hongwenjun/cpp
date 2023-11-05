@@ -1,0 +1,42 @@
+{
+// C:\Users\vip\AppData\Roaming\Code\User\snippets
+// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+
+"regex模版": { "prefix": "regex",
+	"body": [
+	"#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n  string s(\"A1234B5678C999 A1234B5678C999\");"
+	"\tsmatch m;  regex e(\"\\\\\\d+\");\n\n  while (regex_search(s, m, e)) {\n    cout << m.str() << endl;"
+	"\t\ts = m.suffix().str();\n  }\n}"
+	],	"description": "regex模版" },
+
+"fopen示例模版": { "prefix": "fopen",
+	"body": [
+	"#include <stdio.h>\nint main() {\n  FILE *pFile;\n  pFile = fopen(\"myfile.txt\", \"w\");\n  if (pFile != NULL) {",
+	"    $1fputs(\"fopen example\", pFile);\n    fclose(pFile);\n  }\n  return 0;\n}"
+	],	"description": "fopen示例模版" },
+
+"printf模版": {	"prefix": "prf",
+	"body": [
+	"printf(\"%d\", $1);"
+	],	"description": "printf模版" },
+
+"C语言模版": {	"prefix": "cc",
+	"body": [
+	"#include <stdio.h>\n#include <stdlib.h>\n",
+	"int main()",
+	"{",
+	"\t$1printf(\"Hello world!\");",
+	"\treturn 0;",
+	"}"
+	],	"description": "C语言模版" },
+
+"CPP语言模版": { "prefix": "cpp",
+	"body": [
+	"#include <iostream>\n#include <string>\n#include <algorithm>\n",
+	"using namespace std;",
+	"int main(int argc, char* argv[])",
+	"{",
+	"\t$1cout << \"Hello world!\" << endl;",
+	"\treturn 0;",
+	"}"	],	"description": "CPP语言模版" }
+}
