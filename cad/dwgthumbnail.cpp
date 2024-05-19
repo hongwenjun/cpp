@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
 
-bool thumbnail(const char *filePath, const char *savePath) {
-  FILE *fd = fopen(filePath, "rb");
+bool thumbnail(const char *dwgfile, const char *thumb_bmpfile) {
+  FILE *fd = fopen(dwgfile, "rb");
   if (fd == NULL) {
     fprintf(stderr, "无法打开文件\n");
     return false;
@@ -55,7 +54,7 @@ bool thumbnail(const char *filePath, const char *savePath) {
     return false;
   }
 
-  FILE *bmp_file = fopen(savePath, "wb");
+  FILE *bmp_file = fopen(thumb_bmpfile, "wb");
   if (bmp_file == NULL) {
     fprintf(stderr, "无法创建文件\n");
     delete[] bmp_buf;
@@ -83,7 +82,7 @@ bool thumbnail(const char *filePath, const char *savePath) {
   // 写bmp 图片数据
   fwrite(bmp_buf, 1, data_size, bmp_file);
 
-  printf("\n --------->  thumbnail.bmp");
+  printf ("Success. Written thumbnail image to '%s'\n", thumb_bmpfile);
 
   delete[] bmp_buf;
   fclose(fd);
@@ -94,8 +93,13 @@ bool thumbnail(const char *filePath, const char *savePath) {
 int main(int argc, char *argv[]) {
   const char *filePath = "example.dwg";
   const char *savePath = "thumbnail.bmp";
-  if (2 == argc)
+  if (2 >= argc){
     filePath = argv[1];
+    char buf[256] = {0};
+    savePath = strcat(strcpy(buf, filePath), ".bmp");
+  }
+  if (3 == argc)
+    savePath  = argv[2];
 
   thumbnail(filePath, savePath);
   return 0;
@@ -106,4 +110,17 @@ int main(int argc, char *argv[]) {
 # https://github.com/LibreDWG/libredwg/blob/master/programs/dwgbmp.c
 # DWG文件的预览图像数据结构
 # https://blog.csdn.net/lzljy/article/details/103110823
+
+### dwgbmp.sh  ###
+#!/bin/bash
+
+for file in *
+do
+    if [[ "$file" == *.dwg ]]
+    then
+        ./dwgthumbnail.exe "$file"
+    fi
+done
+
+source dwgbmp.sh
 */
