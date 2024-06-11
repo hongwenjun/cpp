@@ -62,10 +62,9 @@
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "sml": "cd $dir && sml $fileName",
         //  VS Code 配置 CodeRunner 使用 MSVC编译器
-        // "cpp": "cd $dir && astyle --ascii $fileName && cl.exe /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib shell32.lib && $dir$fileNameWithoutExt",
-        // "c": "cd $dir  && astyle --ascii $fileName && cl.exe /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib && $dir$fileNameWithoutExt"
-        "cpp": "cd $dir &&  cl.exe /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib shell32.lib && $dir$fileNameWithoutExt",
-        "c": "cd $dir  &&  cl.exe /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib && $dir$fileNameWithoutExt"
+        // "cpp": astyle --ascii $fileName 自动格式化
+        "cpp": "cd $dir &&  cl.exe /utf-8 /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib shell32.lib user32.lib && $dir$fileNameWithoutExt",
+        "c": "cd $dir  &&  cl.exe /utf-8 /nologo /w /EHsc /Ox /DNDEBUG /MD $fileName  /link rpcrt4.lib msvcrt.lib shell32.lib user32.lib && $dir$fileNameWithoutExt"
 
     }
 }
