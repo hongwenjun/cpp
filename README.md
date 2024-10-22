@@ -50,3 +50,16 @@ Path=C:\MSVC2022\bin;%PATH%
 ## [使用GPT 3.5 学习C语言: 25个简单代码让你了解 C 语言基本语法](./base/)
 
 ## [C/C++零基础入门 学习收集的示例代码](./examples/)
+
+## [OpenCV图像处理 学习代码](./opencv/)
+```
+# OpenCV 官方下载地址:
+https://opencv.org/releases/
+
+# 原始文件:
+https://github.com/opencv/opencv/releases/download/4.10.0/opencv-4.10.0-windows.exe
+
+
+# 安装位置: 解压到 MSVC2022 编译器目录
+C:\MSVC2022
+```
