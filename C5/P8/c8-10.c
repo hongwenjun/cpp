@@ -1,22 +1,22 @@
 #include <stdio.h>
 int main()
-{ void sort(int x[ ],int n);                       // sortº¯ÊıÉùÃ÷
+{ void sort(int x[ ],int n);                       // sortå‡½æ•°å£°æ˜
   int i,*p,a[10];
-  p=a;                                             // Ö¸Õë±äÁ¿pÖ¸Ïòa[0]
+  p=a;                                             // æŒ‡é’ˆå˜é‡pæŒ‡å‘a[0]
   printf("please enter 10 integer numberes:");
   for(i=0;i<10;i++)
-    scanf("%d",p++);                               // ÊäÈë10¸öÕûÊı
-  p=a;                                             // Ö¸Õë±äÁ¿pÖØĞÂÖ¸Ïòa[0]
-  sort(p,10);                                      // µ÷ÓÃsortº¯Êı
+    scanf("%d",p++);                               // è¾“å…¥10ä¸ªæ•´æ•°
+  p=a;                                             // æŒ‡é’ˆå˜é‡pé‡æ–°æŒ‡å‘a[0]
+  sort(p,10);                                      // è°ƒç”¨sortå‡½æ•°
   for(p=a,i=0;i<10;i++)
-    {printf("%d ",*p);                             // Êä³öÅÅĞòºóµÄ10¸öÊı×éÔªËØ
+    {printf("%d ",*p);                             // è¾“å‡ºæ’åºåçš„10ä¸ªæ•°ç»„å…ƒç´ 
      p++;
     }
   printf("\n");
   return 0;
 }
 
-void sort(int x[],int n)                           // ¶¨Òåsortº¯Êı£¬xÊÇĞÎ²ÎÊı×éÃû 
+void sort(int x[],int n)                           // å®šä¹‰sortå‡½æ•°ï¼Œxæ˜¯å½¢å‚æ•°ç»„å 
  {int i,j,k,t;
   for(i=0;i<n-1;i++)
     {k=i;

@@ -6,7 +6,7 @@ int main()
   for(p=a;p<(a+10);p++)
     scanf("%d",p);
   for(p=a;p<(a+10);p++)
-    printf("%d ",*p);                             // 用指针指向当前的数组元素
+    printf("%d ",*p);                             // 鐢ㄦ寚閽堟寚鍚戝綋鍓嶇殑鏁扮粍鍏冪礌
   printf("\n");
   return 0;
 }

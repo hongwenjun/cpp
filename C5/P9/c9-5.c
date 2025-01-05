@@ -7,14 +7,14 @@ int main()
      char sex;
      float score;
    };
-   struct student stu_1;          // ¶¨Òåstruct studentÀàĞÍµÄ±äÁ¿stu_1 
-   struct student * p;            // ¶¨ÒåÖ¸Ïòstruct student ÀàĞÍÊı¾İµÄÖ¸Õë±äÁ¿£ğ 
-   p=&stu_1;                      // £ğÖ¸Ïòstu_1 
-   stu_1.num=10101;               // ¶Ô½á¹¹Ìå±äÁ¿µÄ³ÉÔ±¸³Öµ 
+   struct student stu_1;          // å®šä¹‰struct studentç±»å‹çš„å˜é‡stu_1 
+   struct student * p;            // å®šä¹‰æŒ‡å‘struct student ç±»å‹æ•°æ®çš„æŒ‡é’ˆå˜é‡ï½ 
+   p=&stu_1;                      // ï½æŒ‡å‘stu_1 
+   stu_1.num=10101;               // å¯¹ç»“æ„ä½“å˜é‡çš„æˆå‘˜èµ‹å€¼ 
    strcpy(stu_1.name,"Li Lin");
    stu_1.sex='M';
    stu_1.score=89.5;
-   printf("No.:%ld\nname:%s\nsex:%c\nscore:%5.1f\n",stu_1.num,stu_1.name,stu_1.sex,stu_1.score);           // Êä³ö½á¹û 
+   printf("No.:%ld\nname:%s\nsex:%c\nscore:%5.1f\n",stu_1.num,stu_1.name,stu_1.sex,stu_1.score);           // è¾“å‡ºç»“æœ 
    printf("\nNo.:%ld\nname:%s\nsex:%c\nscore:%5.1f\n",(*p).num,(*p).name,(*p).sex, (*p).score);
    return 0;
   } 

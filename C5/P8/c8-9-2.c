@@ -1,12 +1,12 @@
 #include <stdio.h>
 int  main()
-{void inv(int *x,int n);                  // invº¯ÊıÉùÃ÷
- int i,*arr;                              // Ö¸Õë±äÁ¿arrÎ´Ö¸ÏòÊı×éÔªËØ
+{void inv(int *x,int n);                  // invå‡½æ•°å£°æ˜
+ int i,*arr;                              // æŒ‡é’ˆå˜é‡arræœªæŒ‡å‘æ•°ç»„å…ƒç´ 
  printf("The original array:\n");
  for(i=0;i<10;i++)
    scanf("%d",arr+i);                   
  printf("\n");
- inv(arr,10);                             // µ÷ÓÃinvº¯Êı£¬Êµ²ÎarrÊÇÖ¸Õë±äÁ¿£¬µ«ÎŞÖ¸Ïò
+ inv(arr,10);                             // è°ƒç”¨invå‡½æ•°ï¼Œå®å‚arræ˜¯æŒ‡é’ˆå˜é‡ï¼Œä½†æ— æŒ‡å‘
  printf("The array has been inverted:\n");
  for(i=0;i<10;i++)
    printf("%d ",*(arr+i));
@@ -14,7 +14,7 @@ int  main()
  return 0;
 }
 
-void inv(int *x,int n)                      // ¶¨Òåinvº¯Êı£¬ĞÎ²ÎxÊÇÖ¸Õë±äÁ¿ 
+void inv(int *x,int n)                      // å®šä¹‰invå‡½æ•°ï¼Œå½¢å‚xæ˜¯æŒ‡é’ˆå˜é‡ 
  {int *p,m,temp,*i,*j;
   m=(n-1)/2;
   i=x;j=x+n-1;p=x+m;

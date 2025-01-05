@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
   {char string[]="I love China!";           
-   printf("%s\n",string);                    // ÓÃ%sÊä³östrung£¬¿ÉÒÔÊä³öÕû¸ö×Ö·û´®
+   printf("%s\n",string);                    // ç”¨%sè¾“å‡ºstrungï¼Œå¯ä»¥è¾“å‡ºæ•´ä¸ªå­—ç¬¦ä¸²
    printf("%c\n",string[7]);
    return 0;
 }

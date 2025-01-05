@@ -9,9 +9,9 @@ int main()
   return 0;
 }
 
-int max(int x,int y)               // 定义max函数
+int max(int x,int y)               // 瀹氫箟max鍑芥暟
 {
-  int z;                           // 定义临时变量
-  z=x>y?x:y;                       // 把x和y中大者赋给z
-  return(z);                       // 把z作为max函数的伦值带回main函数
+  int z;                           // 瀹氫箟涓存椂鍙橀噺
+  z=x>y?x:y;                       // 鎶妜鍜寉涓ぇ鑰呰祴缁檢
+  return(z);                       // 鎶妟浣滀负max鍑芥暟鐨勪鸡鍊煎甫鍥瀖ain鍑芥暟
 }

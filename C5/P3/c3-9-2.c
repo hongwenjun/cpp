@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main ( )                
-{ putchar(getchar());           // ½«½ÓÊÕµ½µÄ×Ö·ûÊä³ö 
-  putchar(getchar());           // ½«½ÓÊÕµ½µÄ×Ö·ûÊä³ö 
-  putchar(getchar());           // ½«½ÓÊÕµ½µÄ×Ö·ûÊä³ö 
+{ putchar(getchar());           // å°†æ¥æ”¶åˆ°çš„å­—ç¬¦è¾“å‡º 
+  putchar(getchar());           // å°†æ¥æ”¶åˆ°çš„å­—ç¬¦è¾“å‡º 
+  putchar(getchar());           // å°†æ¥æ”¶åˆ°çš„å­—ç¬¦è¾“å‡º 
   putchar('\n'); 
   return 0;
 }

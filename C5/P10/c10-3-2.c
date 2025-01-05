@@ -4,7 +4,7 @@ int main()
 { FILE *fp;
    char  str[3][10];
    int i=0;
-   if((fp=fopen("D:\\CC\\string.dat","r"))==NULL)      // ×¢ÒâÎÄ¼şÃû±ØĞëÓëÇ°ÏàÍ¬ 
+   if((fp=fopen("D:\\CC\\string.dat","r"))==NULL)      // æ³¨æ„æ–‡ä»¶åå¿…é¡»ä¸å‰ç›¸åŒ 
      {printf("can't open file!\n");
 	  exit(0);
      }

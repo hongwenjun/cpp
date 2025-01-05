@@ -1,22 +1,22 @@
 #include <stdio.h>
-struct student                                       // ÉùÃ÷½á¹¹ÌåÀàĞÍstruct student  
+struct student                                       // å£°æ˜ç»“æ„ä½“ç±»å‹struct student  
    {int num;
     char name[20];
     float score;
    };   
 int main()
   {struct student stu[5]={{10101,"Zhang",78},{10103,"Wang",98.5},{10106,"Li",86},
-          {10108,"Ling",73.5},{10110,"Fun",100}};    // ¶¨Òå½áµ¹¹¹ÌåÊı×é²¢³õÊ¼»¯ 
-   struct student temp;                              //¶¨Òå½á¹¹Ìå±äÁ¿temp£¬ÓÃ×÷½»»»Ê±µÄÁÙÊ±±äÁ¿  
+          {10108,"Ling",73.5},{10110,"Fun",100}};    // å®šä¹‰ç»“å€’æ„ä½“æ•°ç»„å¹¶åˆå§‹åŒ– 
+   struct student temp;                              //å®šä¹‰ç»“æ„ä½“å˜é‡tempï¼Œç”¨ä½œäº¤æ¢æ—¶çš„ä¸´æ—¶å˜é‡  
    const int n=5;
    int i,j,k;
    printf("The order is:\n");
    for(i=0;i<n-1;i++)
       {k=i;
        for(j=i+1;j<n;j++)
-         if(stu[j].score>stu[k].score)                // ½øĞĞ³É¼¨µÄ±È½Ï   
+         if(stu[j].score>stu[k].score)                // è¿›è¡Œæˆç»©çš„æ¯”è¾ƒ   
      		k=j;
-      temp=stu[k];stu[k]=stu[i];stu[i]=temp;           // stu[k]ºÍstu[i]ÔªËØ»¥»»  
+      temp=stu[k];stu[k]=stu[i];stu[i]=temp;           // stu[k]å’Œstu[i]å…ƒç´ äº’æ¢  
 	  }
    for(i=0;i<n;i++)
      printf("%6d %8s %6.2f\n",stu[i].num,stu[i].name,stu[i].score);

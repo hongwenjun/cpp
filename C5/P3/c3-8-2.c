@@ -1,11 +1,11 @@
 #include <stdio.h>
 int main ( )
 {
-  int a=66,b=79,c=89;                    // 定义3个字符变量，并初始化   
-  putchar(a);                            // 向显示器输出字符B  
-  putchar(b);                            // 向显示器输出字符O  
-  putchar(c);                            // 向显示器输出字符Y  
-  putchar ('\n');                        // 向显示器输出一个换行符  
+  int a=66,b=79,c=89;                    // 瀹氫箟3涓瓧绗﹀彉閲忥紝骞跺垵濮嬪寲   
+  putchar(a);                            // 鍚戞樉绀哄櫒杈撳嚭瀛楃B  
+  putchar(b);                            // 鍚戞樉绀哄櫒杈撳嚭瀛楃O  
+  putchar(c);                            // 鍚戞樉绀哄櫒杈撳嚭瀛楃Y  
+  putchar ('\n');                        // 鍚戞樉绀哄櫒杈撳嚭涓�涓崲琛岀  
   return 0;
  }
 

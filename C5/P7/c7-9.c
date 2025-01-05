@@ -8,9 +8,9 @@ int main()
    printf("\n");
    for(i=1,m=a[0],n=0;i<10;i++)
    {                       
-	  if (max(m,a[i])>m)                 // Èômaxº¯Êı·µ»ØµÄÖµ´óÓÚm                  
-	  {m=max(m,a[i]);                    // maxº¯Êı·µ»ØµÄÖµÈ¡´úmÔ­Öµ
-	   n=i;                              // °Ñ´ËÊı×éÔªËØµÄĞòºÅ¼ÇÏÂÀ´£¬·ÅÔÚnÖĞ
+	  if (max(m,a[i])>m)                 // è‹¥maxå‡½æ•°è¿”å›çš„å€¼å¤§äºm                  
+	  {m=max(m,a[i]);                    // maxå‡½æ•°è¿”å›çš„å€¼å–ä»£måŸå€¼
+	   n=i;                              // æŠŠæ­¤æ•°ç»„å…ƒç´ çš„åºå·è®°ä¸‹æ¥ï¼Œæ”¾åœ¨nä¸­
 	  }
    }
     printf("The largest number is %d\nit is the %dth number.\n",m,n+1);

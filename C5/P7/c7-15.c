@@ -1,16 +1,16 @@
 #include <stdio.h>
-int a=3,b=5;                     // a,bÊÇÈ«¾Ö±äÁ¿
+int a=3,b=5;                     // a,bæ˜¯å…¨å±€å˜é‡
 int main()
 {
-  int max(int a,int b);           // º¯ÊýÉùÃ÷¡£a,bÊÇÐÎ²Î
-  int a=8;                        // aÊÇ¾Ö¾Ö²¿±äÁ¿  
-  printf("max=%d\n",max(a,b));    // ±äÁ¿aÊÇº¯ÊýÖÐ¶¨ÒåµÄ¾Ö²¿±äÁ¿a
+  int max(int a,int b);           // å‡½æ•°å£°æ˜Žã€‚a,bæ˜¯å½¢å‚
+  int a=8;                        // aæ˜¯å±€å±€éƒ¨å˜é‡  
+  printf("max=%d\n",max(a,b));    // å˜é‡aæ˜¯å‡½æ•°ä¸­å®šä¹‰çš„å±€éƒ¨å˜é‡a
   return 0;
 } 
 
-int max(int a,int b)               // a,bÊÇº¯ÊýÐÎ²Î        
+int max(int a,int b)               // a,bæ˜¯å‡½æ•°å½¢å‚        
 {
   int c;
-  c=a>b?a:b;                       // °ÑaºÍbÖÐµÄ´óÕß´æ·ÅÔÚcÖÐ 
+  c=a>b?a:b;                       // æŠŠaå’Œbä¸­çš„å¤§è€…å­˜æ”¾åœ¨cä¸­ 
   return(c);
 }

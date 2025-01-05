@@ -1,14 +1,14 @@
 #include <stdio.h>
 int main()
 { int max( );     
-  extern int A,B,C;                        // °ÑÍâ²¿±äÁ¿A,B,CµÄ×÷ÓÃÓòÀ©Õ¹µ½´Ó´Ë´¦¿ªÊ¼
+  extern int A,B,C;                        // æŠŠå¤–éƒ¨å˜é‡A,B,Cçš„ä½œç”¨åŸŸæ‰©å±•åˆ°ä»æ­¤å¤„å¼€å§‹
   printf("Please enter three integer numbers:");
   scanf("%d %d %d",&A,&B,&C);
   printf("max is %d\n",max());
   return 0;
 }
 
-int A ,B ,C;                     // ¶¨ÒåÍâ²¿±äÁ¿A,B,C      
+int A ,B ,C;                     // å®šä¹‰å¤–éƒ¨å˜é‡A,B,C      
 
 int max( )    
 { int m;

@@ -4,11 +4,11 @@ int main()
 { extern void enter_string(char str[]);
   extern void delete_string(char str[],char ch);
   extern void print_string(char str[]);
-    // ÒÔÉÏ3ĞĞÉùÃ÷ÔÚ±¾º¯ÊıÖĞ½«Òªµ÷ÓÃµÄÒÑÔÚÆäËûÎÄ¼şÖĞ¶¨ÒåµÄ3¸öº¯Êı
+    // ä»¥ä¸Š3è¡Œå£°æ˜åœ¨æœ¬å‡½æ•°ä¸­å°†è¦è°ƒç”¨çš„å·²åœ¨å…¶ä»–æ–‡ä»¶ä¸­å®šä¹‰çš„3ä¸ªå‡½æ•°
   char c,str[80];
-  enter_string(str);                 // µ÷ÓÃÔÚÆäËûÎÄ¼şÖĞ¶¨ÒåµÄenter_stringº¯Êı
+  enter_string(str);                 // è°ƒç”¨åœ¨å…¶ä»–æ–‡ä»¶ä¸­å®šä¹‰çš„enter_stringå‡½æ•°
   scanf("%c",&c);
-  delete_string(str,c);               // µ÷ÓÃÔÚÆäËûÎÄ¼şÖĞ¶¨ÒåµÄdelete_stringº¯Êı 
-  print_string(str);                  // µ÷ÓÃÔÚÆäËûÎÄ¼şÖĞ¶¨ÒåµÄprint_stringº¯Êı     
+  delete_string(str,c);               // è°ƒç”¨åœ¨å…¶ä»–æ–‡ä»¶ä¸­å®šä¹‰çš„delete_stringå‡½æ•° 
+  print_string(str);                  // è°ƒç”¨åœ¨å…¶ä»–æ–‡ä»¶ä¸­å®šä¹‰çš„print_stringå‡½æ•°     
   return 0;     
 }

@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
-{ int a=100,b=10;                            // ¶¨ÒåÕûĞÍ±äÁ¿a,b£¬²¢³õÊ¼»¯
-  int *pointer_1, *pointer_2;                // ¶¨ÒåÖ¸ÏòÕûĞÍÊı¾İµÄÖ¸Õë±äÁ¿pointer_1, pointer_2
-  pointer_1=&a;                              // °Ñ±äÁ¿aµÄµØÖ·¸³¸øÖ¸Õë±äÁ¿pointer_1
-  pointer_2=&b;                              // °Ñ±äÁ¿bµÄµØÖ·¸³¸øÖ¸Õë±äÁ¿pointer_2 
-  printf("a=%d,b=%d\n",a,b);                 // Êä³ö±äÁ¿aºÍbµÄÖµ
+{ int a=100,b=10;                            // å®šä¹‰æ•´å‹å˜é‡a,bï¼Œå¹¶åˆå§‹åŒ–
+  int *pointer_1, *pointer_2;                // å®šä¹‰æŒ‡å‘æ•´å‹æ•°æ®çš„æŒ‡é’ˆå˜é‡pointer_1, pointer_2
+  pointer_1=&a;                              // æŠŠå˜é‡açš„åœ°å€èµ‹ç»™æŒ‡é’ˆå˜é‡pointer_1
+  pointer_2=&b;                              // æŠŠå˜é‡bçš„åœ°å€èµ‹ç»™æŒ‡é’ˆå˜é‡pointer_2 
+  printf("a=%d,b=%d\n",a,b);                 // è¾“å‡ºå˜é‡aå’Œbçš„å€¼
   printf("*pointer_1=%d,*pointer_2=%d\n",*pointer_1,*pointer_2);     //
   return 0;
 }

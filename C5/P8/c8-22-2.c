@@ -1,17 +1,17 @@
 #include <stdio.h>
 int main()
  {int max(int,int);
-  int (*p)(int,int);                           // 定义指向函数的指针变量p
+  int (*p)(int,int);                           // 瀹氫箟鎸囧悜鍑芥暟鐨勬寚閽堝彉閲弍
   int a,b,c;
-  p=max;                                       // 使p指向max函数
+  p=max;                                       // 浣縫鎸囧悜max鍑芥暟
   printf("please enter a and b:");
   scanf("%d,%d",&a,&b);
-  c=(*p)(a,b);                                 // 通过指针变量调用max函数
+  c=(*p)(a,b);                                 // 閫氳繃鎸囬拡鍙橀噺璋冪敤max鍑芥暟
   printf("a=%d\nb=%d\nmax=%d\n",a,b,c);
   return 0;
 }
 
-int max(int x,int y)                            // 定义max函数
+int max(int x,int y)                            // 瀹氫箟max鍑芥暟
   {int z;
    if(x>y)  z=x;
    else     z=y;

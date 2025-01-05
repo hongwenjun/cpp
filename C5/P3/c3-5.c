@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include  <math.h>                                // ³ÌĞòÖĞÒªµ÷ÓÃÇóÆ½·½¸ùº¯Êısqrt  
+#include  <math.h>                                // ç¨‹åºä¸­è¦è°ƒç”¨æ±‚å¹³æ–¹æ ¹å‡½æ•°sqrt  
 int main ( ) 
- {double a,b,c,disc,x1,x2,p,q;                    // discÊÇÅĞ±ğÊ½sqrt(b*b-4ac)  
-  scanf("%lf%lf%lf",&a,&b,&c);                    // ÊäÈëÊµĞÍ±äÁ¿µÄÖµÒªÓÃ¸ñÊ½ÉùÃ÷"%f"  
+ {double a,b,c,disc,x1,x2,p,q;                    // discæ˜¯åˆ¤åˆ«å¼sqrt(b*b-4ac)  
+  scanf("%lf%lf%lf",&a,&b,&c);                    // è¾“å…¥å®å‹å˜é‡çš„å€¼è¦ç”¨æ ¼å¼å£°æ˜"%f"  
   disc=b*b-4*a*c;
   p=-b/(2.0*a);
   q=sqrt(disc)/(2.0*a);
-  x1=p+q;x2=p-q;                                  // Çó³ö·½³ÌµÄÁ½¸ö¸ù  
-  printf("x1=%7.2f\nx2=%7.2f\n",x1,x2);           // Êä³ö·½³ÌµÄÁ½¸ö¸ù   
+  x1=p+q;x2=p-q;                                  // æ±‚å‡ºæ–¹ç¨‹çš„ä¸¤ä¸ªæ ¹  
+  printf("x1=%7.2f\nx2=%7.2f\n",x1,x2);           // è¾“å‡ºæ–¹ç¨‹çš„ä¸¤ä¸ªæ ¹   
   return 0;
 }
 

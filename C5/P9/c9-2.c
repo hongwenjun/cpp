@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main()
- {struct student                      // ÉùÃ÷½á¹¹ÌåÀàĞÍstruct student 
+ {struct student                      // å£°æ˜ç»“æ„ä½“ç±»å‹struct student 
    {int num;
     char name[20];
     float score;
-   }student1,student2;                 // ¶¨ÒåÁ½¸ö½á¹¹Ìå±äÁ¿seudent1,student2 
-  scanf("%d%s%f",&student1.num,student1.name, &student1.score);    //ÊäÈëÑ§Éú1µĞÊı¾İ
-  scanf("%d%s%f",&student2.num,student2.name, &student2.score);    //ÊäÈëÑ§Éú1µĞÊı¾İ
+   }student1,student2;                 // å®šä¹‰ä¸¤ä¸ªç»“æ„ä½“å˜é‡seudent1,student2 
+  scanf("%d%s%f",&student1.num,student1.name, &student1.score);    //è¾“å…¥å­¦ç”Ÿ1æ•Œæ•°æ®
+  scanf("%d%s%f",&student2.num,student2.name, &student2.score);    //è¾“å…¥å­¦ç”Ÿ1æ•Œæ•°æ®
   printf("The higher score is:\n");
   if (student1.score>student2.score)
      printf("%d  %s  %6.2f\n",student1.num,student1.name, student1.score);

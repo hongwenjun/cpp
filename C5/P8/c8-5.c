@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main()
-{ void exchange(int *q1, int *q2, int *q3);    // º¯ÊıÉùÃ÷  
+{ void exchange(int *q1, int *q2, int *q3);    // å‡½æ•°å£°æ˜  
   int a,b,c,*p1,*p2,*p3;
   printf("please enter three numbers:");
   scanf("%d,%d,%d",&a,&b,&c);
@@ -10,16 +10,16 @@ int main()
   return 0;
 }
 
-void exchange(int *q1, int *q2, int *q3)       // ¶¨Òå½«3¸ö±äÁ¿µÄÖµ½»»»µÄº¯Êı   
-{ void swap(int *pt1, int *pt2);               // º¯ÊıÉùÃ÷  
-  if(*q1<*q2) swap(q1,q2);                     // Èç¹ûa<b£¬½»»»aºÍbµÄÖµ  
-  if(*q1<*q3) swap(q1,q3);                     // Èç¹ûa<c£¬½»»»aºÍcµÄÖµ  
-  if(*q2<*q3) swap(q2,q3);                     // Èç¹ûb<c£¬½»»»bºÍcµÄÖµ  
+void exchange(int *q1, int *q2, int *q3)       // å®šä¹‰å°†3ä¸ªå˜é‡çš„å€¼äº¤æ¢çš„å‡½æ•°   
+{ void swap(int *pt1, int *pt2);               // å‡½æ•°å£°æ˜  
+  if(*q1<*q2) swap(q1,q2);                     // å¦‚æœa<bï¼Œäº¤æ¢aå’Œbçš„å€¼  
+  if(*q1<*q3) swap(q1,q3);                     // å¦‚æœa<cï¼Œäº¤æ¢aå’Œcçš„å€¼  
+  if(*q2<*q3) swap(q2,q3);                     // å¦‚æœb<cï¼Œäº¤æ¢bå’Œcçš„å€¼  
 }        
 
-void swap(int *pt1, int *pt2)                  // ¶¨Òå½»»»2¸ö±äÁ¿µÄÖµµÄº¯Êı      
+void swap(int *pt1, int *pt2)                  // å®šä¹‰äº¤æ¢2ä¸ªå˜é‡çš„å€¼çš„å‡½æ•°      
 { int temp;
-  temp=*pt1;                                   // »»*pt1ºÍ*pt2±äÁ¿µÄÖµ  
+  temp=*pt1;                                   // æ¢*pt1å’Œ*pt2å˜é‡çš„å€¼  
   *pt1=*pt2;
   *pt2=temp;
 }  

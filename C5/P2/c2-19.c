@@ -2,7 +2,7 @@
 int main( )
  {
   int sign=1;
-  double deno=2.0,sum=1.0,term;    // 定义deno,sum,term为双精度变量 
+  double deno=2.0,sum=1.0,term;    // 瀹氫箟deno,sum,term涓哄弻绮惧害鍙橀噺 
   while (deno<=100)
   {
    sign=-sign;

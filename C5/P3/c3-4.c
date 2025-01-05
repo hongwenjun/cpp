@@ -2,14 +2,14 @@
 #include <math.h>
 int main ( )
  {
-   double a,b,c,s,area;                       // ¶¨Òå¸÷±äÁ¿£¬¾ùÎªdoubleĞÍ 
-   a=3.67;                                    // ¶Ô±ß³¤a¸³Öµ 
-   b=5.43;                                    // ¶Ô±ß³¤b¸³Öµ 
-   c=6.21;                                    // ¶Ô±ß³¤c¸³Öµ  
-   s=(a+b+c)/2;	                              // ¼ÆËãs 
-   area=sqrt(s*(s-a)*(s-b)*(s-c));            // ¼ÆËãarea 
-   printf("a=%f\tb=%f\t%f\n",a,b,c);          // Êä³öÈı±ßa,b,cµÄÖµ 
-   printf("area=%f\n",area);                  // Êä³öÃæ»ıareaµÄÖµ
+   double a,b,c,s,area;                       // å®šä¹‰å„å˜é‡ï¼Œå‡ä¸ºdoubleå‹ 
+   a=3.67;                                    // å¯¹è¾¹é•¿aèµ‹å€¼ 
+   b=5.43;                                    // å¯¹è¾¹é•¿bèµ‹å€¼ 
+   c=6.21;                                    // å¯¹è¾¹é•¿cèµ‹å€¼  
+   s=(a+b+c)/2;	                              // è®¡ç®—s 
+   area=sqrt(s*(s-a)*(s-b)*(s-c));            // è®¡ç®—area 
+   printf("a=%f\tb=%f\t%f\n",a,b,c);          // è¾“å‡ºä¸‰è¾¹a,b,cçš„å€¼ 
+   printf("area=%f\n",area);                  // è¾“å‡ºé¢ç§¯areaçš„å€¼
    return 0;
  }  
 

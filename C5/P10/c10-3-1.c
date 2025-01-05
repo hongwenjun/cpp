@@ -3,13 +3,13 @@
 #include <string.h> 
 int main()
 {  FILE *fp;
-   char  str[3][10],temp[10];   // strÊÇÓÃÀ´´æ·Å×Ö·û´®µÄ¶şÎ¬Êı×é£¬tempÊÇÁÙÊ±Êı×é  
+   char  str[3][10],temp[10];   // stræ˜¯ç”¨æ¥å­˜æ”¾å­—ç¬¦ä¸²çš„äºŒç»´æ•°ç»„ï¼Œtempæ˜¯ä¸´æ—¶æ•°ç»„  
    int i,j,k,n=3;
-   printf("Enter strings:\n");    // ÌáÊ¾ÊäÈë×Ö·û´® */
+   printf("Enter strings:\n");    // æç¤ºè¾“å…¥å­—ç¬¦ä¸² */
    for(i=0;i<n;i++)         
-     gets(str[i]);              // ÊäÈë×Ö·û´®
+     gets(str[i]);              // è¾“å…¥å­—ç¬¦ä¸²
    
-   for(i=0;i<n-1;i++)           // ÓÃÑ¡Ôñ·¨¶Ô×Ö·û´®ÅÅĞò  
+   for(i=0;i<n-1;i++)           // ç”¨é€‰æ‹©æ³•å¯¹å­—ç¬¦ä¸²æ’åº  
      {k=i;
       for(j=i+1;j<n;j++)
 	    if(strcmp(str[k],str[j])>0) k=j;
@@ -19,15 +19,15 @@ int main()
 	     strcpy(str[k],temp);
         }
 	 }
-   if((fp=fopen("D:\\CC\\string.dat","w"))==NULL)     // ´ò¿ª´ÅÅÌÎÄ¼ş  
+   if((fp=fopen("D:\\CC\\string.dat","w"))==NULL)     // æ‰“å¼€ç£ç›˜æ–‡ä»¶  
         {
 	     printf("can't open file!\n");
 	     exit(0);
         }
    printf("\nThe new sequence:\n");
    for(i=0;i<n;i++)
-	  {fputs(str[i],fp);fputs("\n",fp);       // ³·ºÅ 
-	   printf("%s\n",str[i]);                 // ÔÚÆÁÄ»ÉÏÏÔÊ¾×Ö·û´®  
+	  {fputs(str[i],fp);fputs("\n",fp);       // æ’¤å· 
+	   printf("%s\n",str[i]);                 // åœ¨å±å¹•ä¸Šæ˜¾ç¤ºå­—ç¬¦ä¸²  
      }
    return 0;
 }

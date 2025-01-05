@@ -1,19 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>                     // ³ÌĞòÖĞÓÃÁËmallocº¯Êı£¬Ó¦°üº¬stdlib.h
+#include <stdlib.h>                     // ç¨‹åºä¸­ç”¨äº†mallocå‡½æ•°ï¼Œåº”åŒ…å«stdlib.h
 int main()
-{ void check(int *);                    // º¯ÊıÉùÃ÷
-  int *p1,i;                            // p1ÊÇintĞÍÖ¸Õë
-  p1=(int *)malloc(5*sizeof(int));     // ¿ª±Ù¶¯Ì¬×ÔÓÉÄÚ´æÇø£¬ÏÈ½«µØÖ·×ª»»³É int *ĞÍ£¬È»ºó·ÅÔÚp1ÖĞ
+{ void check(int *);                    // å‡½æ•°å£°æ˜
+  int *p1,i;                            // p1æ˜¯intå‹æŒ‡é’ˆ
+  p1=(int *)malloc(5*sizeof(int));     // å¼€è¾ŸåŠ¨æ€è‡ªç”±å†…å­˜åŒºï¼Œå…ˆå°†åœ°å€è½¬æ¢æˆ int *å‹ï¼Œç„¶åæ”¾åœ¨p1ä¸­
   for(i=0;i<5;i++) 
-     scanf("%d",p1+i);                  // ÊäÈë5¸öÑ§ÉúµÄ³É¼¨ 
-  check(p1);                            // µ÷ÓÃcheckº¯Êı
+     scanf("%d",p1+i);                  // è¾“å…¥5ä¸ªå­¦ç”Ÿçš„æˆç»© 
+  check(p1);                            // è°ƒç”¨checkå‡½æ•°
   return 0;
 }
   
-void check(int *p)                      // ¶¨Òåcheckº¯Êı£¬ĞÎ²ÎÊÇint*Ö¸Õë
+void check(int *p)                      // å®šä¹‰checkå‡½æ•°ï¼Œå½¢å‚æ˜¯int*æŒ‡é’ˆ
 { int i;
   printf("They are fail:");
   for(i=0;i<5;i++)
-   if (p[i]<60) printf("%d ",p[i]);     // Êä³ö²»ºÏ¸ñµÄ³É¼¨ 
+   if (p[i]<60) printf("%d ",p[i]);     // è¾“å‡ºä¸åˆæ ¼çš„æˆç»© 
   printf("\n");
 }  

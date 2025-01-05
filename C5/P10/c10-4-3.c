@@ -5,17 +5,17 @@ struct student_type
   int num;
   int age;
   char addr[15];
- }stud[SIZE];                // ¶¨ÒåÈ«¾Ö½á¹¹ÌåÊı×éstud£¬°üº¬10¸öÑ§ÉúÊı¾İ  
+ }stud[SIZE];                // å®šä¹‰å…¨å±€ç»“æ„ä½“æ•°ç»„studï¼ŒåŒ…å«10ä¸ªå­¦ç”Ÿæ•°æ®  
 
 void load( )
   {FILE *fp;
    int i;
-   if((fp=fopen("stu_list","rb"))==NULL)     // ´ò¿ªÊäÈëÎÄ¼şstu_list  
+   if((fp=fopen("stu_list","rb"))==NULL)     // æ‰“å¼€è¾“å…¥æ–‡ä»¶stu_list  
      {printf("cannot open infile\n");
       return;
      }
    for(i=0;i<SIZE;i++)
-     if(fread(&stud[i],sizeof(struct student_type),1,fp)!=1)  // ´Óstu_ listÎÄ¼şÖĞ¶ÁÊı¾İ  
+     if(fread(&stud[i],sizeof(struct student_type),1,fp)!=1)  // ä»stu_ listæ–‡ä»¶ä¸­è¯»æ•°æ®  
        {if(feof(fp)) 
 	     {fclose(fp); 
           return;
@@ -25,10 +25,10 @@ void load( )
    fclose (fp);
   }   
        
-void save( )                // ¶¨Òåº¯Êısave£¬ÏòÎÄ¼şÊä³öSIZE¸öÑ§ÉúµÄÊı¾İ  
+void save( )                // å®šä¹‰å‡½æ•°saveï¼Œå‘æ–‡ä»¶è¾“å‡ºSIZEä¸ªå­¦ç”Ÿçš„æ•°æ®  
   {FILE *fp;
    int i;
-   if((fp=fopen ("stu.dat","wb"))==NULL)    // ´ò¿ªÊä³öÎÄ¼şatu_list  
+   if((fp=fopen ("stu.dat","wb"))==NULL)    // æ‰“å¼€è¾“å‡ºæ–‡ä»¶atu_list  
       {printf("cannot open file\n");
        return;
       }

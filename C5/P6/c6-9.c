@@ -2,17 +2,17 @@
 #include<string.h>
 int main ( )
 {
-  char str[3][20];                 // ¶¨Òå¶şÎ¬×Ö·ûÊı×é
-  char string[20];                 // ¶¨ÒåÒ»Î¬×Ö·ûÊı×é£¬×÷Îª½»»»×Ö·û´®Ê±µÄÁÙÊ±×Ö·ûÊı×é
+  char str[3][20];                 // å®šä¹‰äºŒç»´å­—ç¬¦æ•°ç»„
+  char string[20];                 // å®šä¹‰ä¸€ç»´å­—ç¬¦æ•°ç»„ï¼Œä½œä¸ºäº¤æ¢å­—ç¬¦ä¸²æ—¶çš„ä¸´æ—¶å­—ç¬¦æ•°ç»„
   int i;
   for (i=0;i<3;i++)
-      gets (str[i]);                 // ¶ÁÈë3¸ö×Ö·û´®£¬·Ö±ğ¸østr[0],str[1],str[2]   
-  if (strcmp(str[0],str[1])>0)     // Èôstr[0]´óÓÚstr[1]
-	  strcpy(string,str[0]);       // °Ñstr[0]µÄ×Ö·û´®¸³¸ø×Ö·ûÊı×éstring
-  else                             // Èôstr[0]Ğ¡ÓÚµÈÓÚstr[1]
-	  strcpy(string,str[1]);       // °Ñstr[1]µÄ×Ö·û´®¸³¸ø×Ö·ûÊı×éstring 
-  if (strcmp(str[2],string)>0)     // Èôstr[2]´óÓÚstring
-      strcpy(string,str[2]);       // °Ñstr[2]µÄ×Ö·û´®¸³¸ø×Ö·ûÊı×éstring     
-  printf("\nthe largest string is:\n%s\n",string);  // Êä³östring
+      gets (str[i]);                 // è¯»å…¥3ä¸ªå­—ç¬¦ä¸²ï¼Œåˆ†åˆ«ç»™str[0],str[1],str[2]   
+  if (strcmp(str[0],str[1])>0)     // è‹¥str[0]å¤§äºstr[1]
+	  strcpy(string,str[0]);       // æŠŠstr[0]çš„å­—ç¬¦ä¸²èµ‹ç»™å­—ç¬¦æ•°ç»„string
+  else                             // è‹¥str[0]å°äºç­‰äºstr[1]
+	  strcpy(string,str[1]);       // æŠŠstr[1]çš„å­—ç¬¦ä¸²èµ‹ç»™å­—ç¬¦æ•°ç»„string 
+  if (strcmp(str[2],string)>0)     // è‹¥str[2]å¤§äºstring
+      strcpy(string,str[2]);       // æŠŠstr[2]çš„å­—ç¬¦ä¸²èµ‹ç»™å­—ç¬¦æ•°ç»„string     
+  printf("\nthe largest string is:\n%s\n",string);  // è¾“å‡ºstring
   return 0;
 }

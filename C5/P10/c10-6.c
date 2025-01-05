@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include<stdio.h>
-struct student_type       // Ñ§ÉúÊı¾İÀàĞÍ  
+struct student_type       // å­¦ç”Ÿæ•°æ®ç±»å‹  
  { char name[10];
    int num;
    int age;
@@ -10,14 +10,14 @@ struct student_type       // Ñ§ÉúÊı¾İÀàĞÍ
 int main()
   { int i;
     FILE  *fp;         
-	if((fp=fopen("stu.dat","rb"))==NULL)   // ÒÔÖ»¶Á·½Ê½´ò¿ª¶ş½øÖÆÎÄ¼ş  
+	if((fp=fopen("stu.dat","rb"))==NULL)   // ä»¥åªè¯»æ–¹å¼æ‰“å¼€äºŒè¿›åˆ¶æ–‡ä»¶  
       {printf("can not open file\n");
        exit(0);
       }
     for(i=0;i<10;i+=2)
-     {fseek(fp,i*sizeof(struct student_type),0);        // ÒÆ¶¯Î»ÖÃÖ¸Õë 
-      fread(&stud[i], sizeof(struct student_type),1,fp);  // ¶ÁÒ»¸öÊı¾İ¿éµ½½á¹¹Ìå±äÁ¿ 
-      printf("%-10s %4d %4d %-15s\n",stud[i].name,stud[i].num,stud[i].age,stud[i].addr); // ÔÚÆÁÄ»Êä³ö 
+     {fseek(fp,i*sizeof(struct student_type),0);        // ç§»åŠ¨ä½ç½®æŒ‡é’ˆ 
+      fread(&stud[i], sizeof(struct student_type),1,fp);  // è¯»ä¸€ä¸ªæ•°æ®å—åˆ°ç»“æ„ä½“å˜é‡ 
+      printf("%-10s %4d %4d %-15s\n",stud[i].name,stud[i].num,stud[i].age,stud[i].addr); // åœ¨å±å¹•è¾“å‡º 
      }
     fclose(fp);
 	return 0;

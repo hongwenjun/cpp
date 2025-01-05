@@ -14,11 +14,11 @@ int main()
  return 0;
 }
 
-void inv(int *x,int n)                   //ĞÎ²ÎxÊÇÖ¸Õë±äÁ¿       
+void inv(int *x,int n)                   //å½¢å‚xæ˜¯æŒ‡é’ˆå˜é‡       
  {int temp,*i,*j;
   i=x;j=x+n-1;
   for(;i<=j;i++,j--)
-  {temp=*i;*i=*j;*j=temp;}               //*iÓë*j½»»»
+  {temp=*i;*i=*j;*j=temp;}               //*iä¸*jäº¤æ¢
   return;
  }
 

@@ -11,16 +11,16 @@ struct student_type
 int main( )
   {int i;
    FILE *fp;
-   if((fp=fopen ("stu.dat","rb"))==NULL)        // ´ò¿ªÊäÈëÎÄ¼şatu.dat  
+   if((fp=fopen ("stu.dat","rb"))==NULL)        // æ‰“å¼€è¾“å…¥æ–‡ä»¶atu.dat  
       {printf("cannot open file\n");
        exit(0) ;
       }
    for(i=0;i<SIZE;i++)
-     {fread (&stud[i],sizeof(struct student_type),1,fp);       // ´ÓfpÖ¸ÏòµÄÎÄ¼ş¶ÁÈëÒ»×éÊı¾İ  
+     {fread (&stud[i],sizeof(struct student_type),1,fp);       // ä»fpæŒ‡å‘çš„æ–‡ä»¶è¯»å…¥ä¸€ç»„æ•°æ®  
       printf ("%-10s %4d %4d  %-15s\n",stud[i].name,stud[i].num,stud[i]. age,stud[i].addr);
-            // ÔÚÆÁÄ»ÉÏÊä³öÕâ×éÊı¾İ 
+            // åœ¨å±å¹•ä¸Šè¾“å‡ºè¿™ç»„æ•°æ® 
      }
-   fclose (fp);                                  // ¹Ø±ÕÎÄ¼ş"stu.dat" 
+   fclose (fp);                                  // å…³é—­æ–‡ä»¶"stu.dat" 
    return 0;
   }
 

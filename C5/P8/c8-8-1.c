@@ -4,21 +4,21 @@ int main()
  int i,a[10]={3,7,9,11,0,6,7,5,4,2};
  printf("The original array:\n");
  for(i=0;i<10;i++)
-   printf("%d ",a[i]);                   // Êä³öÎ´½»»»Ê±Êý×é¸÷ÔªËØµÄÖµ
+   printf("%d ",a[i]);                   // è¾“å‡ºæœªäº¤æ¢æ—¶æ•°ç»„å„å…ƒç´ çš„å€¼
  printf("\n");
- inv(a,10);                               // µ÷ÓÃinvº¯Êý£¬½øÐÐ½»»»
+ inv(a,10);                               // è°ƒç”¨invå‡½æ•°ï¼Œè¿›è¡Œäº¤æ¢
  printf("The array has been inverted:\n");
  for(i=0;i<10;i++)
-   printf("%d ",a[i]);                    //  Êä³ö½»»»ºóÊý×é¸÷ÔªËØµÄÖµ
+   printf("%d ",a[i]);                    //  è¾“å‡ºäº¤æ¢åŽæ•°ç»„å„å…ƒç´ çš„å€¼
  printf("\n");
  return 0;
 }
 
-void inv(int x[ ],int n)                  // ÐÎ²ÎxÊÇÎÃÊý×éÃû
+void inv(int x[ ],int n)                  // å½¢å‚xæ˜¯èšŠæ•°ç»„å
  {int temp,i,j,m=(n-1)/2;
   for(i=0;i<=m;i++)
     {j=n-1-i;
-     temp=x[i];x[i]=x[j];x[j]=temp;       // °Ñx[i]ºÍx[j]½»»»
+     temp=x[i];x[i]=x[j];x[j]=temp;       // æŠŠx[i]å’Œx[j]äº¤æ¢
 	}
   return;
  }

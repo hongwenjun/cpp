@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main()
   {FILE *fp1,*fp2;
-   fp1=fopen("file1.dat","r");              // ´ò¿ªÊäÈëÎÄ¼ş  
-   fp2=fopen("file2.dat","w");              // ´ò¿ªÊä³öÎÄ¼ş  
-   while(!feof(fp1)) putchar(getc(fp1));    // Öğ¸ö¶ÁÈë×Ö·û²¢Êä³öµ½ÆÁÄ»  
-   putchar(10);                             // Êä³öÒ»¸ö»»ĞĞ 
-   rewind(fp1);                             // Ê¹ÎÄ¼şÎ»ÖÃÖ¸Ê¾Æ÷·µ»ØÎÄ¼şÍ·  
-   while(!feof(fp1)) putc(getc(fp1),fp2);   // ´ÓÎÄ¼şÍ·ÖØĞÂÖğ¸ö¶Á×Ö·û£¬Êä³öµ½file2ÎÄ¼ş  
+   fp1=fopen("file1.dat","r");              // æ‰“å¼€è¾“å…¥æ–‡ä»¶  
+   fp2=fopen("file2.dat","w");              // æ‰“å¼€è¾“å‡ºæ–‡ä»¶  
+   while(!feof(fp1)) putchar(getc(fp1));    // é€ä¸ªè¯»å…¥å­—ç¬¦å¹¶è¾“å‡ºåˆ°å±å¹•  
+   putchar(10);                             // è¾“å‡ºä¸€ä¸ªæ¢è¡Œ 
+   rewind(fp1);                             // ä½¿æ–‡ä»¶ä½ç½®æŒ‡ç¤ºå™¨è¿”å›æ–‡ä»¶å¤´  
+   while(!feof(fp1)) putc(getc(fp1),fp2);   // ä»æ–‡ä»¶å¤´é‡æ–°é€ä¸ªè¯»å­—ç¬¦ï¼Œè¾“å‡ºåˆ°file2æ–‡ä»¶  
    fclose(fp1);fclose(fp2);
    return 0;
   }

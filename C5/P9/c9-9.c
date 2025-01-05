@@ -29,7 +29,7 @@ struct student *creat(void)
 
 int main()
 { struct student *pt;
-  pt=creat();                                                // º¯Êı·µ»ØÁ´±íµÚÒ»¸ö½áµãµÄµØÖ· 
-  printf("\nnum:%ld\nscore:%5.1f\n",pt->num,pt->score);      // Êä³öµÚÒ»¸ö½áµãµÄ³ÉÔ±Öµ
+  pt=creat();                                                // å‡½æ•°è¿”å›é“¾è¡¨ç¬¬ä¸€ä¸ªç»“ç‚¹çš„åœ°å€ 
+  printf("\nnum:%ld\nscore:%5.1f\n",pt->num,pt->score);      // è¾“å‡ºç¬¬ä¸€ä¸ªç»“ç‚¹çš„æˆå‘˜å€¼
   return 0;
 };

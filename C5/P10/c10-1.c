@@ -3,24 +3,24 @@
 int main()
   {FILE *fp;
    char ch,filename[10];
-   printf("ÇëÊäÈëËùÓÃµÄÎÄ¼þÃû£º");
+   printf("è¯·è¾“å…¥æ‰€ç”¨çš„æ–‡ä»¶åï¼š");
    scanf("%s",filename);
-   if((fp=fopen(filename,"w"))==NULL)       // ´ò¿ªÊä³öÎÄ¼þ²¢Ê¹fpÖ¸Ïò´ËÎÄ¼þ 
+   if((fp=fopen(filename,"w"))==NULL)       // æ‰“å¼€è¾“å‡ºæ–‡ä»¶å¹¶ä½¿fpæŒ‡å‘æ­¤æ–‡ä»¶ 
 	  {
-       printf("ÎÞ·¨´ò¿ª´ËÎÄ¼þ\n");          // Èç¹û´ò¿ªÊ±³ö´í£¬¾ÍÊä³ö"´ò²»¿ª"µÄÐÅÏ¢  
-       exit(0);                             // ÖÕÖ¹³ÌÐò*/
+       printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶\n");          // å¦‚æžœæ‰“å¼€æ—¶å‡ºé”™ï¼Œå°±è¾“å‡º"æ‰“ä¸å¼€"çš„ä¿¡æ¯  
+       exit(0);                             // ç»ˆæ­¢ç¨‹åº*/
        }
-   ch=getchar( );                           // ½ÓÊÕÔÚÖ´ÐÐscanfÓï¾äÊ±×îºóÊäÈëµÄ»Ø³µ·û  
-   printf("ÇëÊäÈëÒ»¸ö×¼±¸´æ´¢µ½´ÅÅÌµÄ×Ö·û´®(ÒÔ#½áÊø)£º");
-   ch=getchar( );                           // ½ÓÊÕ´Ó¼üÅÌÊäÈëµÄµÚÒ»¸ö×Ö·û 
-   while(ch!='#')                           // µ±ÊäÈë'#'Ê±½áÊøÑ­»·  
+   ch=getchar( );                           // æŽ¥æ”¶åœ¨æ‰§è¡Œscanfè¯­å¥æ—¶æœ€åŽè¾“å…¥çš„å›žè½¦ç¬¦  
+   printf("è¯·è¾“å…¥ä¸€ä¸ªå‡†å¤‡å­˜å‚¨åˆ°ç£ç›˜çš„å­—ç¬¦ä¸²(ä»¥#ç»“æŸ)ï¼š");
+   ch=getchar( );                           // æŽ¥æ”¶ä»Žé”®ç›˜è¾“å…¥çš„ç¬¬ä¸€ä¸ªå­—ç¬¦ 
+   while(ch!='#')                           // å½“è¾“å…¥'#'æ—¶ç»“æŸå¾ªçŽ¯  
 	{
-	  fputc(ch,fp);                         // Ïò´ÅÅÌÎÄ¼þÊä³öÒ»¸ö×Ö·û  
-      putchar(ch);                          // ½«Êä³öµÄ×Ö·ûÏÔÊ¾ÔÚÆÁÄ»ÉÏ  
-	  ch=getchar();                         // ÔÙ½ÓÊÕ´Ó¼üÅÌÊäÈëµÄÒ»¸ö×Ö·û  
+	  fputc(ch,fp);                         // å‘ç£ç›˜æ–‡ä»¶è¾“å‡ºä¸€ä¸ªå­—ç¬¦  
+      putchar(ch);                          // å°†è¾“å‡ºçš„å­—ç¬¦æ˜¾ç¤ºåœ¨å±å¹•ä¸Š  
+	  ch=getchar();                         // å†æŽ¥æ”¶ä»Žé”®ç›˜è¾“å…¥çš„ä¸€ä¸ªå­—ç¬¦  
 
 	 }
-   fclose(fp);                              // ¹Ø±ÕÎÄ¼þ  
-   putchar(10);                             // ÏòÆÁÄ»Êä³öÒ»¸ö»»ÐÐ·û£¬»»ÐÐ·ûµÄASCII´úÂëÎª10 
+   fclose(fp);                              // å…³é—­æ–‡ä»¶  
+   putchar(10);                             // å‘å±å¹•è¾“å‡ºä¸€ä¸ªæ¢è¡Œç¬¦ï¼Œæ¢è¡Œç¬¦çš„ASCIIä»£ç ä¸º10 
    return 0;
   }

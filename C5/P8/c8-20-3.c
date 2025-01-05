@@ -3,15 +3,15 @@ int main()
 {void copy_string(char *from, char *to);
  char *a="I am a teacher.";
  char b[]="You are a student.";
- char *p=b;                                             // Ê¹Ö¸Õë±äÁ¿pÖ¸ÏòbÊı×éÊ×ÔªËØ
- printf("string a=%s\nstring b=%s\n",a,b);              // Êä³öa´®ºÍb´®
+ char *p=b;                                             // ä½¿æŒ‡é’ˆå˜é‡pæŒ‡å‘bæ•°ç»„é¦–å…ƒç´ 
+ printf("string a=%s\nstring b=%s\n",a,b);              // è¾“å‡ºaä¸²å’Œbä¸²
  printf("\ncopy string a to string b:\n");
- copy_string(a,p);                                      // µ÷ÓÃcopy_stringº¯Êı£¬ÊµÏÖ¸´ÖÆ
+ copy_string(a,p);                                      // è°ƒç”¨copy_stringå‡½æ•°ï¼Œå®ç°å¤åˆ¶
  printf("string a=%s\nstring b=%s\n",a,b);  
  return 0;
 }
 
-void copy_string(char *from, char *to)                  // ¶¨Òåº¯Êı£¬ĞÎ²ÎÎª×Ö·ûÖ¸Õë±äÁ¿
+void copy_string(char *from, char *to)                  // å®šä¹‰å‡½æ•°ï¼Œå½¢å‚ä¸ºå­—ç¬¦æŒ‡é’ˆå˜é‡
 {  for(;*from!='\0';from++,to++)
       {*to=*from;}
    *to='\0';

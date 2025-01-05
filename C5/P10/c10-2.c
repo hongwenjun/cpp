@@ -2,28 +2,28 @@
 #include <stdlib.h>
 int main( )
   {FILE *in,*out;
-   char  ch,infile[10],outfile[10];     // ¶¨ÒåÁ½¸ö×Ö·ûÊý×é£¬·Ö±ð´æ·ÅÁ½¸öÎÄ¼þÃû  
-   printf("ÊäÈë¶ÁÈëÎÄ¼þµÄÃû×Ö:");
-   scanf("%s",infile);                  // ÊäÈëÒ»¸öÊäÈëÎÄ¼þµÄÃû×Ö  
-   printf("ÊäÈëÊä³öÎÄ¼þµÄÃû×Ö:");
-   scanf("%s",outfile);                 // ÊäÈëÒ»¸öÊä³öÎÄ¼þµÄÃû×Ö  
-   if((in=fopen(infile,"r"))==NULL)     // ´ò¿ªÊäÈëÎÄ¼þ  
-      {printf("ÎÞ·¨´ò¿ª´ËÎÄ¼þ\n");
+   char  ch,infile[10],outfile[10];     // å®šä¹‰ä¸¤ä¸ªå­—ç¬¦æ•°ç»„ï¼Œåˆ†åˆ«å­˜æ”¾ä¸¤ä¸ªæ–‡ä»¶å  
+   printf("è¾“å…¥è¯»å…¥æ–‡ä»¶çš„åå­—:");
+   scanf("%s",infile);                  // è¾“å…¥ä¸€ä¸ªè¾“å…¥æ–‡ä»¶çš„åå­—  
+   printf("è¾“å…¥è¾“å‡ºæ–‡ä»¶çš„åå­—:");
+   scanf("%s",outfile);                 // è¾“å…¥ä¸€ä¸ªè¾“å‡ºæ–‡ä»¶çš„åå­—  
+   if((in=fopen(infile,"r"))==NULL)     // æ‰“å¼€è¾“å…¥æ–‡ä»¶  
+      {printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶\n");
        exit(0);
       }
-   if((out=fopen(outfile,"w"))==NULL)   // ´ò¿ªÊä³öÎÄ¼þ  
-     {printf("ÎÞ·¨´ò¿ª´ËÎÄ¼þ\n");
+   if((out=fopen(outfile,"w"))==NULL)   // æ‰“å¼€è¾“å‡ºæ–‡ä»¶  
+     {printf("æ— æ³•æ‰“å¼€æ­¤æ–‡ä»¶\n");
       exit(0);
      }
-   ch=fgetc(in);                       //´ÓÊäÈëÎÄ¼þ¶ÁÈëÒ»¸ö×Ö·û£¬·ÅÔÚ±äÁ¿chÖÐ
-   while(!feof(in))                    // Èç¹ûÎ´Óöµ½ÊäÈëÎÄ¼þµÄ½áÊø±êÖ¾  
-     {fputc(ch,out);                   // ½«chÐ´µ½Êä³öÎÄ¼þÖÐ  
-      putchar(ch);                     // ½«chÏÔÊ¾ÔÚÆÁÄ»ÉÏ  
-	  ch=fgetc(in);                    // ´ÓÊäÈëÎÄ¼þ¶ÁÈëÒ»¸ö×Ö·û£¬·ÅÔÚ±äÁ¿chÖÐ 
+   ch=fgetc(in);                       //ä»Žè¾“å…¥æ–‡ä»¶è¯»å…¥ä¸€ä¸ªå­—ç¬¦ï¼Œæ”¾åœ¨å˜é‡chä¸­
+   while(!feof(in))                    // å¦‚æžœæœªé‡åˆ°è¾“å…¥æ–‡ä»¶çš„ç»“æŸæ ‡å¿—  
+     {fputc(ch,out);                   // å°†chå†™åˆ°è¾“å‡ºæ–‡ä»¶ä¸­  
+      putchar(ch);                     // å°†chæ˜¾ç¤ºåœ¨å±å¹•ä¸Š  
+	  ch=fgetc(in);                    // ä»Žè¾“å…¥æ–‡ä»¶è¯»å…¥ä¸€ä¸ªå­—ç¬¦ï¼Œæ”¾åœ¨å˜é‡chä¸­ 
      }
-   putchar(10);                        // ÏÔÊ¾ÍêÈ«²¿×Ö·ûºó»»ÐÐ  
-   fclose(in);                         // ¹Ø±ÕÊäÈëÎÄ¼þ  
-   fclose(out);                        // ¹Ø±ÕÊä³öÎÄ¼þ  
+   putchar(10);                        // æ˜¾ç¤ºå®Œå…¨éƒ¨å­—ç¬¦åŽæ¢è¡Œ  
+   fclose(in);                         // å…³é—­è¾“å…¥æ–‡ä»¶  
+   fclose(out);                        // å…³é—­è¾“å‡ºæ–‡ä»¶  
    return 0;
   }
 

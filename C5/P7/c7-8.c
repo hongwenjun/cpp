@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-  void hanoi(int n,char one,char two,char three);         // ¶Ôhanoiº¯ÊýµÄÉùÃ÷ 
+  void hanoi(int n,char one,char two,char three);         // å¯¹hanoiå‡½æ•°çš„å£°æ˜Ž 
   int m;
   printf("input the number of diskes:");
   scanf("%d",&m);
@@ -10,10 +10,10 @@ int main()
   return 0;
 }
 
-void hanoi(int n,char one,char two,char three)          // ¶¨Òåhanoiº¯Êý  
-    // ½«n¸öÅÌ´Óone×ù½èÖútwo×ù,ÒÆµ½three×ù 
+void hanoi(int n,char one,char two,char three)          // å®šä¹‰hanoiå‡½æ•°  
+    // å°†nä¸ªç›˜ä»Žoneåº§å€ŸåŠ©twoåº§,ç§»åˆ°threeåº§ 
  {
-   void move(char x,char y);       // ¶Ômoveº¯ÊýµÄÉùÃ÷ 
+   void move(char x,char y);       // å¯¹moveå‡½æ•°çš„å£°æ˜Ž 
    if(n==1)
      move(one,three);
    else
@@ -24,7 +24,7 @@ void hanoi(int n,char one,char two,char three)          // ¶¨Òåhanoiº¯Êý
     }
  }
 
- void move(char x,char y)           //  ¶¨Òåmoveº¯Êý 
+ void move(char x,char y)           //  å®šä¹‰moveå‡½æ•° 
  {
     printf("%c-->%c\n",x,y);
  }

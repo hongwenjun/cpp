@@ -2,12 +2,12 @@
 int main()
  { int *p1,*p2,*p,a,b;
    printf("please enter two integer numbers:");
-   scanf("%d,%d",&a,&b);                   // ÊäÈëÁ½¸öÕûÊı
-   p1=&a;                                  // Ê¹p1Ö¸Ïò±äÁ¿a
-   p2=&b;                                  // Ê¹p2Ö¸Ïò±äÁ¿b 
-   if(a<b)                                 // Èç¹ûa<b
-     {p=p1;p1=p2;p2=p;}                    // Ê¹p1Óëp2µÄÖµ»¥»»
-   printf("a=%d,b=%d\n",a,b);              // Êä³öa,b
-   printf("max=%d,min=%d\n",*p1,*p2);      // Êä³öp1ºÍp2ËùÖ¸ÏòµÄ±äÁ¿µÄÖµ
+   scanf("%d,%d",&a,&b);                   // è¾“å…¥ä¸¤ä¸ªæ•´æ•°
+   p1=&a;                                  // ä½¿p1æŒ‡å‘å˜é‡a
+   p2=&b;                                  // ä½¿p2æŒ‡å‘å˜é‡b 
+   if(a<b)                                 // å¦‚æœa<b
+     {p=p1;p1=p2;p2=p;}                    // ä½¿p1ä¸p2çš„å€¼äº’æ¢
+   printf("a=%d,b=%d\n",a,b);              // è¾“å‡ºa,b
+   printf("max=%d,min=%d\n",*p1,*p2);      // è¾“å‡ºp1å’Œp2æ‰€æŒ‡å‘çš„å˜é‡çš„å€¼
    return 0;
 }

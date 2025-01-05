@@ -1,26 +1,26 @@
 #include <stdio.h>
 int main()
-{ int max4(int a,int b,int c,int d);             // ¶Ômax4µÄº¯ÊýÉùÃ÷
+{ int max4(int a,int b,int c,int d);             // å¯¹max4çš„å‡½æ•°å£°æ˜Ž
   int a,b,c,d,max;
-  printf("Please enter 4 interger numbers:");    // ÌáÊ¾ÊäÈë4¸öÊý
-  scanf("%d %d %d %d",&a,&b,&c,&d);              // ÊäÈë4¸öÊý
-  max=max4(a,b,c,d);                             // µ÷ÓÃmax4º¯Êý£¬µÃµ½4¸öÊýÖÐµÄ×î´óÕß
-  printf("max=%d \n",max);                       // Êä³ö4¸öÊýÖÐµÄ×î´óÕß  
+  printf("Please enter 4 interger numbers:");    // æç¤ºè¾“å…¥4ä¸ªæ•°
+  scanf("%d %d %d %d",&a,&b,&c,&d);              // è¾“å…¥4ä¸ªæ•°
+  max=max4(a,b,c,d);                             // è°ƒç”¨max4å‡½æ•°ï¼Œå¾—åˆ°4ä¸ªæ•°ä¸­çš„æœ€å¤§è€…
+  printf("max=%d \n",max);                       // è¾“å‡º4ä¸ªæ•°ä¸­çš„æœ€å¤§è€…  
   return 0;
 } 
 
-int max4(int a,int b,int c,int d)   // ¶¨Òåmax4º¯Êý 
-{int max2(int a,int b);             // ¶Ômax2µÄº¯ÊýÉùÃ÷
+int max4(int a,int b,int c,int d)   // å®šä¹‰max4å‡½æ•° 
+{int max2(int a,int b);             // å¯¹max2çš„å‡½æ•°å£°æ˜Ž
  int m; 
- m=max2(a,b);                       // µ÷ÓÃmax2º¯Êý£¬µÃµ½aºÍbÁ½¸öÊýÖÐµÄ´óÕß£¬·ÅÔÚmÖÐ
- m=max2(m,c);                       // µ÷ÓÃmax2º¯Êý£¬µÃµ½a,b,cÈý¸öÊýÖÐµÄ´óÕß£¬·ÅÔÚmÖÐ                         
- m=max2(m,d);                       // µ÷ÓÃmax2º¯Êý£¬µÃµ½a,b,c,dËÄ¸öÊýÖÐµÄ´óÕß£¬·ÅÔÚmÖÐ           
- return(m);                         // °Ñm×÷Îªº¯ÊýÖµ´ø»Ømainº¯Êý
+ m=max2(a,b);                       // è°ƒç”¨max2å‡½æ•°ï¼Œå¾—åˆ°aå’Œbä¸¤ä¸ªæ•°ä¸­çš„å¤§è€…ï¼Œæ”¾åœ¨mä¸­
+ m=max2(m,c);                       // è°ƒç”¨max2å‡½æ•°ï¼Œå¾—åˆ°a,b,cä¸‰ä¸ªæ•°ä¸­çš„å¤§è€…ï¼Œæ”¾åœ¨mä¸­                         
+ m=max2(m,d);                       // è°ƒç”¨max2å‡½æ•°ï¼Œå¾—åˆ°a,b,c,då››ä¸ªæ•°ä¸­çš„å¤§è€…ï¼Œæ”¾åœ¨mä¸­           
+ return(m);                         // æŠŠmä½œä¸ºå‡½æ•°å€¼å¸¦å›žmainå‡½æ•°
 }
 
-int max2(int a,int b)               // ¶¨Òåmax2º¯Êý 
+int max2(int a,int b)               // å®šä¹‰max2å‡½æ•° 
 {if(a>=b)
-   return a;                        // Èôa>=b£¬½«aÎªº¯Êý·µ»ØÖµ 
+   return a;                        // è‹¥a>=bï¼Œå°†aä¸ºå‡½æ•°è¿”å›žå€¼ 
  else 
-   return b;                        // Èôa<b£¬½«bÎªº¯Êý·µ»ØÖµ
+   return b;                        // è‹¥a<bï¼Œå°†bä¸ºå‡½æ•°è¿”å›žå€¼
 }

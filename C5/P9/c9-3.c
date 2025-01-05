@@ -1,14 +1,14 @@
 #include <string.h>
 #include <stdio.h>
-struct person                               // ÉùÃ÷½á¹¹ÌåÀàĞÍstruct person
-  {char name[20];                           // ºòÑ¡ÈËĞÕÃû
-   int count;                               // ºòÑ¡ÈËµÃÆ±Êı 
-  }leader[3]={"Li",0,"Zhang",0,"Sun",0};    // ¶¨Òå½á¹¹ÌåÊı×é²¢³õÊ¼»¯
+struct person                               // å£°æ˜ç»“æ„ä½“ç±»å‹struct person
+  {char name[20];                           // å€™é€‰äººå§“å
+   int count;                               // å€™é€‰äººå¾—ç¥¨æ•° 
+  }leader[3]={"Li",0,"Zhang",0,"Sun",0};    // å®šä¹‰ç»“æ„ä½“æ•°ç»„å¹¶åˆå§‹åŒ–
 int main()
   {int i,j;
-   char leader_name[20];                    // ¶¨Òå×Ö·ûÊı×é 
+   char leader_name[20];                    // å®šä¹‰å­—ç¬¦æ•°ç»„ 
    for (i=1;i<=10;i++)
-	 {scanf("%s",leader_name);              // ÊäÈëËùÑ¡µÄºòÑ¡ÈËĞÕÃû  
+	 {scanf("%s",leader_name);              // è¾“å…¥æ‰€é€‰çš„å€™é€‰äººå§“å  
       for(j=0;j<3;j++)
 	    if(strcmp(leader_name,leader[j].name)==0) leader[j].count++;
      }

@@ -2,9 +2,9 @@
 int main ( )
 {
   char c1,c2;
-  c1='A';                         // ½«×Ö·û'A'µÄASCII´úÂë·Åµ½c1±äÁ¿ÖÐ
-  c2=c1+32;	                      // µÃµ½×Ö·û'a'µÄASCII´úÂë£¬·ÅÔÚc2±äÁ¿ÖÐ 
-  printf("%c\n",c2);              // Êä³öc2µÄÖµ£¬ÊÇÒ»¸ö×Ö·û
-  printf("%d\n",c2);              // Êä³öc2µÄÖµ£¬ÊÇ×Ö·û'a'µÄASCII´úÂë
+  c1='A';                         // å°†å­—ç¬¦'A'çš„ASCIIä»£ç æ”¾åˆ°c1å˜é‡ä¸­
+  c2=c1+32;	                      // å¾—åˆ°å­—ç¬¦'a'çš„ASCIIä»£ç ï¼Œæ”¾åœ¨c2å˜é‡ä¸­ 
+  printf("%c\n",c2);              // è¾“å‡ºc2çš„å€¼ï¼Œæ˜¯ä¸€ä¸ªå­—ç¬¦
+  printf("%d\n",c2);              // è¾“å‡ºc2çš„å€¼ï¼Œæ˜¯å­—ç¬¦'a'çš„ASCIIä»£ç 
   return 0;
 }

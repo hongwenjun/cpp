@@ -5,12 +5,12 @@ struct student_type
   int num;
   int age;
   char addr[15];
- }stud[SIZE];                // ¶¨ÒåÈ«¾Ö½á¹¹ÌåÊı×éstud£¬°üº¬10¸öÑ§ÉúÊı¾İ  
+ }stud[SIZE];                // å®šä¹‰å…¨å±€ç»“æ„ä½“æ•°ç»„studï¼ŒåŒ…å«10ä¸ªå­¦ç”Ÿæ•°æ®  
 
-void save( )                 // ¶¨Òåº¯Êısave£¬ÏòÎÄ¼şÊä³öSIZE¸öÑ§ÉúµÄÊı¾İ  
+void save( )                 // å®šä¹‰å‡½æ•°saveï¼Œå‘æ–‡ä»¶è¾“å‡ºSIZEä¸ªå­¦ç”Ÿçš„æ•°æ®  
   {FILE *fp;
    int i;
-   if((fp=fopen ("stu.dat","wb"))==NULL)    // ´ò¿ªÊä³öÎÄ¼şatu_list  
+   if((fp=fopen ("stu.dat","wb"))==NULL)    // æ‰“å¼€è¾“å‡ºæ–‡ä»¶atu_list  
       {printf("cannot open file\n");
        return;
       }
@@ -23,7 +23,7 @@ void save( )                 // ¶¨Òåº¯Êısave£¬ÏòÎÄ¼şÊä³öSIZE¸öÑ§ÉúµÄÊı¾İ
 int main()
   {int i;
    printf("Please enter data of students:\n");
-   for(i=0;i<SIZE;i++)           // ÊäÈëSIZE¸öÑ§ÉúµÄÊı¾İ£¬´æ·ÅÔÚÊı×éstudÖĞ  
+   for(i=0;i<SIZE;i++)           // è¾“å…¥SIZEä¸ªå­¦ç”Ÿçš„æ•°æ®ï¼Œå­˜æ”¾åœ¨æ•°ç»„studä¸­  
      scanf("%s%d%d%s",stud[i].name,&stud[i].num,&stud[i].age,stud[i].addr);
    save( );
    return 0;

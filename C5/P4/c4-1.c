@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include  <math.h>                         // ³ÌĞòÖĞÒªµ÷ÓÃÇóÆ½·½¸ùº¯Êısqrt  
+#include  <math.h>                         // ç¨‹åºä¸­è¦è°ƒç”¨æ±‚å¹³æ–¹æ ¹å‡½æ•°sqrt  
 int main ( ) 
- {double a,b,c,disc,x1,x2,p,q;             // discÊÇÅĞ±ğÊ½sqrt(b*b-4ac)  
-  scanf("%lf%lf%lf",&a,&b,&c);             // ÊäÈëË«¾«¶È¸¡µãĞÍ±äÁ¿µÄÖµÒªÓÃ¸ñÊ½ÉùÃ÷"%lf"  
+ {double a,b,c,disc,x1,x2,p,q;             // discæ˜¯åˆ¤åˆ«å¼sqrt(b*b-4ac)  
+  scanf("%lf%lf%lf",&a,&b,&c);             // è¾“å…¥åŒç²¾åº¦æµ®ç‚¹å‹å˜é‡çš„å€¼è¦ç”¨æ ¼å¼å£°æ˜"%lf"  
   disc=b*b-4*a*c;
   if (disc<0)
 	printf("This equation hav't real roots\n");
   else
     { p=-b/(2.0*a);
       q=sqrt(disc)/(2.0*a);
-      x1=p+q;x2=p-q;                        // Çó³ö·½³ÌµÄÁ½¸ö¸ù  
-      printf("real roots:\nx1=%10.6f\nx2=%10.6f\n",x1,x2);        // Êä³ö·½³ÌµÄÁ½¸ö¸ù
+      x1=p+q;x2=p-q;                        // æ±‚å‡ºæ–¹ç¨‹çš„ä¸¤ä¸ªæ ¹  
+      printf("real roots:\nx1=%10.6f\nx2=%10.6f\n",x1,x2);        // è¾“å‡ºæ–¹ç¨‹çš„ä¸¤ä¸ªæ ¹
     }
   return 0;
 }

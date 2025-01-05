@@ -1,5 +1,5 @@
 #include <stdio.h>
-float Max=0,Min=0;                                       // ¶¨ÒåÈ«¾Ö±äÁ¿Max,Min
+float Max=0,Min=0;                                       // å®šä¹‰å…¨å±€å˜é‡Max,Min
 int main()
 { float average(float array[ ],int n);
   float ave,score[10];
@@ -12,7 +12,7 @@ int main()
   return 0;
  }
 
-float average(float array[ ],int n)                       // ¶¨Òåº¯Êı£¬ÓĞÒ»ĞÎ²ÎÊÇÊı×é
+float average(float array[ ],int n)                       // å®šä¹‰å‡½æ•°ï¼Œæœ‰ä¸€å½¢å‚æ˜¯æ•°ç»„
 { int i;
   float aver,sum=array[0];
   Max=Min=array[0];

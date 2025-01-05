@@ -1,21 +1,21 @@
 #include <stdio.h>
 int main()
- {float score[ ][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};   //¶¨ÒåÊı×é£¬´æ·Å³É¼¨
-  float  *search(float (*pointer)[4],int n);                       // º¯ÊıÉùÃ÷
+ {float score[ ][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};   //å®šä¹‰æ•°ç»„ï¼Œå­˜æ”¾æˆç»©
+  float  *search(float (*pointer)[4],int n);                       // å‡½æ•°å£°æ˜
   float  *p;
   int i,k;
   printf("enter the number of student:");
-  scanf("%d",&k);                                                  // ÊäÈëÒªÕÒµÄÑ§ÉúµÄĞòºÅ
+  scanf("%d",&k);                                                  // è¾“å…¥è¦æ‰¾çš„å­¦ç”Ÿçš„åºå·
   printf("The scores of No.%d are:\n",k);
-  p=search(score,k);                                    //µ÷ÓÃsearchº¯Êı£¬·µ»Øscore[k][0]µÄµØÖ·
+  p=search(score,k);                                    //è°ƒç”¨searchå‡½æ•°ï¼Œè¿”å›score[k][0]çš„åœ°å€
   for(i=0;i<4;i++)
-    printf("%5.2f\t",*(p+i));                           // Êä³öscore[k][0]µ½score[k][3]µÄÖµ
+    printf("%5.2f\t",*(p+i));                           // è¾“å‡ºscore[k][0]åˆ°score[k][3]çš„å€¼
   printf("\n");
   return 0;
 }
 
-float *search(float (*pointer)[4],int n)               // ¶¨Òåº¯Êı£¬ĞÎ²ÎpointerÊÇÖ¸ÏòÒ»Î¬Êı×éµÄÖ¸Õë±äÁ¿
+float *search(float (*pointer)[4],int n)               // å®šä¹‰å‡½æ•°ï¼Œå½¢å‚pointeræ˜¯æŒ‡å‘ä¸€ç»´æ•°ç»„çš„æŒ‡é’ˆå˜é‡
   {float *pt;
-   pt=*(pointer+n);                                    // ptµÄÖµÊÇ&score[k][0]
+   pt=*(pointer+n);                                    // ptçš„å€¼æ˜¯&score[k][0]
    return(pt);
 }

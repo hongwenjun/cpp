@@ -1,26 +1,26 @@
 #include <stdio.h>
 int main()
- {float score[ ][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};   //¶¨ÒåÊı×é£¬´æ·Å³É¼¨
-  float  *search(float (*pointer)[4]);                      // º¯ÊıÉùÃ÷
+ {float score[ ][4]={{60,70,80,90},{56,89,67,88},{34,78,90,66}};   //å®šä¹‰æ•°ç»„ï¼Œå­˜æ”¾æˆç»©
+  float  *search(float (*pointer)[4]);                      // å‡½æ•°å£°æ˜
   float  *p;
   int i,j;
   for(i=0;i<3;i++)
-     {p=search(score+i);                                    //µ÷ÓÃsearchº¯Êı,ÈçÓĞ²»¼°¸ñ·µ»Øscore[i][0]µÄµØÖ·£¬·ñÔò·µ»ØNULL£¬
-      if(p==*(score+i))                                     //Èç¹û·µ»ØµÄÊÇscore[i][0]µÄµØÖ·
+     {p=search(score+i);                                    //è°ƒç”¨searchå‡½æ•°,å¦‚æœ‰ä¸åŠæ ¼è¿”å›score[i][0]çš„åœ°å€ï¼Œå¦åˆ™è¿”å›NULLï¼Œ
+      if(p==*(score+i))                                     //å¦‚æœè¿”å›çš„æ˜¯score[i][0]çš„åœ°å€
         {printf("No.%d score:",i);
 		 for(j=0;j<4;j++)
-            printf("%5.2f  ",*(p+j));                       // Êä³öscore[i][0]µ½score[i][3]µÄÖµ
+            printf("%5.2f  ",*(p+j));                       // è¾“å‡ºscore[i][0]åˆ°score[i][3]çš„å€¼
          printf("\n");
         } 
      }
   return 0;
 }
 
-float *search(float (*pointer)[4])                            // ¶¨Òåº¯Êı£¬ĞÎ²ÎpointerÊÇÖ¸ÏòÒ»Î¬Êı×éµÄÖ¸Õë±äÁ¿
+float *search(float (*pointer)[4])                            // å®šä¹‰å‡½æ•°ï¼Œå½¢å‚pointeræ˜¯æŒ‡å‘ä¸€ç»´æ•°ç»„çš„æŒ‡é’ˆå˜é‡
   {int i=0;
    float *pt;
-   pt=NULL;                                                   // ÏÈÊ¹ptµÄÖµÎªNULL
+   pt=NULL;                                                   // å…ˆä½¿ptçš„å€¼ä¸ºNULL
    for(;i<4;i++)
-     if(*(*pointer+i)<60) pt=*pointer;                        // Èç¹ûÓĞ²»¼°¸ñ¿Î³Ì£¬Ê¹ptÖ¸Ïòscore[i][0] 
+     if(*(*pointer+i)<60) pt=*pointer;                        // å¦‚æœæœ‰ä¸åŠæ ¼è¯¾ç¨‹ï¼Œä½¿ptæŒ‡å‘score[i][0] 
    return(pt);
 }

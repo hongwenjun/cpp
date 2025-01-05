@@ -4,13 +4,13 @@ int main()
   char string[81];
   int i,num=0,word=0;
   char c;
-  gets(string);                           // ÊäÈëÒ»¸ö×Ö·û´®¸ø×Ö·ûÊı×éstring
-  for (i=0;(c=string[i])!='\0';i++)       // Ö»Òª×Ö·û²»ÊÇ'\0'¾Í¼ÌĞøÖ´ĞĞÑ­»·
-    if(c==' ') word=0;                    // Èç¹ûÊÇ¿Õ¸ñ×Ö·û£¬Ê¹wordÖÃ0
-    else if(word==0)                      // Èç¹û²»ÊÇ¿Õ¸ñ×Ö·ûÇÒwordÔ­ÖµÎª0
-		{word=1;                          // Ê¹wordÖÃ1
-	     num++;                           // numÀÛ¼Ó1£¬±íÊ¾Ôö¼ÓÒ»¸öµ¥´Ê
+  gets(string);                           // è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ç»™å­—ç¬¦æ•°ç»„string
+  for (i=0;(c=string[i])!='\0';i++)       // åªè¦å­—ç¬¦ä¸æ˜¯'\0'å°±ç»§ç»­æ‰§è¡Œå¾ªç¯
+    if(c==' ') word=0;                    // å¦‚æœæ˜¯ç©ºæ ¼å­—ç¬¦ï¼Œä½¿wordç½®0
+    else if(word==0)                      // å¦‚æœä¸æ˜¯ç©ºæ ¼å­—ç¬¦ä¸”wordåŸå€¼ä¸º0
+		{word=1;                          // ä½¿wordç½®1
+	     num++;                           // numç´¯åŠ 1ï¼Œè¡¨ç¤ºå¢åŠ ä¸€ä¸ªå•è¯
 		}
-  printf("There are %d words in this line.\n",num);  //Êä³ö½á¹û
+  printf("There are %d words in this line.\n",num);  //è¾“å‡ºç»“æœ
   return 0;
 }
