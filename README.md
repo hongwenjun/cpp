@@ -1,6 +1,9 @@
 # cpp
 C/C++零基础入门 系列教程 不懂英文 从零开始
 
+##  [MSVC2022_ForCPG.7z](https://drive.google.com/file/d/1Nz2QoVcLMdKf6FHJDYA0euT2Bh9x8W3h/view?usp=sharing)    2025.03.02
+- https://drive.google.com/file/d/1Nz2QoVcLMdKf6FHJDYA0euT2Bh9x8W3h/view?usp=sharing
+
 ### github源码:  https://github.com/hongwenjun/cpp
 ## [【C/CPP零基础入门_Part01_排序算法 冒泡排序】](https://b23.tv/CCcx3mX)
 ### https://b23.tv/CCcx3mX
