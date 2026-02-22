@@ -1,0 +1,720 @@
+程序填空题（一）
+下列给定程序中,函数fun的功能是：把形参a所指数组中的偶数按原顺序依次存放到a［0］、a［1］、a［2］…中,把奇数从数组中删除,偶数的个数通过函数值返回。
+例如,若a所指数组中的数据最初排列为：9,1,4,2,3,6,5,8,7,删除奇数后a所指数组中的数据为：4,2,6,8,返回值为4。
+请在下划线处填入正确的内容并将下划线删除,使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+#define  N  9
+int fun(int  a[], int  n)
+{  int  i,j;
+   j = 0;
+   for (i=0; i<n; i++)
+/**********found**********/
+      if (___1___== 0) {
+/**********found**********/
+        ___2___ = a[i]; j++;
+      }
+/**********found**********/
+   return ___3___;
+}
+main()
+{  int  b[N]={9,1,4,2,3,6,5,8,7}, i, n;
+   printf("\nThe original data  :\n");
+   for (i=0; i<N; i++)  printf("%4d ", b[i]);
+   printf("\n");
+   n = fun(b, N);
+   printf("\nThe number of even  ：%d\n", n);
+   printf("\nThe even  :\n");
+   for (i=0; i<n; i++)  printf("%4d ", b[i]);
+   printf("\n");
+}
+
+程序填空题（二）
+下列给定程序中，函数fun的功能是：在形参s所指字符串中寻找与参数c相同的字符，并在其后插入一个与之相同的字符，若找不到相同的字符则不做任何处理。
+例如，若s所指字符串为"baacda"，c中的字符为a，执行后s所指字符串为"baaaacdaa"。
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+void fun(char  *s, char  c)
+{  int  i, j, n;
+/**********found**********/
+  for(i=0; s[i]!=___1___ ; i++)
+     if(s[i]==c)
+     {
+/**********found**********/
+        n=___2___ ;
+        while(s[i+1+n]!='\0')  n++;
+        for(j=i+n+1; j>i; j--)  s[j+1]=s[j];
+/**********found**********/
+        s[j+1]=___3___ ;
+        i=i+1;
+     }
+}
+main()
+{  char  s[80]="baacda", c;
+   printf("\nThe string:  %s\n",s);
+   printf("\nInput a character:  ");  scanf("%c",&c);
+   fun(s,c);
+   printf("\nThe result is:  %s\n",s);
+}
+
+程序填空题（三）
+下列给定程序中，函数fun的功能是：有N×N矩阵，以主对角线为对称线，对称元素相加并将结果存放在左下三角元素中，右上三角元素置为0。
+例如，若N＝3，有下列矩阵：
+1　　2　　3
+4　　5　　6
+7　　8　　9
+计算后结果为
+1　　0　　0
+6　　5　　0
+10　 14　 9
+请在程序的下划线处填入正确的内容并把下划线删除。使程序得出正确的结果。
+注意：不得增行或删行，也不得改程序的结构！
+#include  <stdio.h>
+#define  N  4
+/**********found**********/
+void fun(int  (*t)___1___ )
+{  int  i, j;
+   for(i=1; i<N; i++)
+   {  for(j=0; j<i; j++)
+      {
+/**********found**********/
+         ___2___ =t[i][j]+t[j][i];
+/**********found**********/
+         ___3___ =0;
+      }
+   }
+}
+main()
+{  int  t[][N]={21,12,13,24,25,16,47,38,29,11,32,54,42,21,33,10}, i, j;
+   printf("\nThe original array:\n");
+   for(i=0; i<N; i++)
+   {  for(j=0; j<N; j++)  printf("%2d  ",t[i][j]);
+      printf("\n");
+   }
+   fun(t);
+   printf("\nThe result is:\n");
+   for(i=0; i<N; i++)
+   {  for(j=0; j<N; j++)  printf("%2d  ",t[i][j]);
+      printf("\n");
+   }
+}
+
+程序填空题（四）
+下列给定程序中，函数fun的功能是：把形参s所指字符串中下标为奇数的字符右移到下一个奇数位置，最右边被移出字符串的字符绕回放到第一个奇数位置，下标为偶数的字符不动(注：字符串的长度大于等于2)。
+例如，形参s所指字符串为"abcdefgh"，执行结果为"ahcbedgf"。
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+void fun(char  *s)
+{  int  i, n, k;    char c;
+   n=0;
+   for(i=0; s[i]!='\0'; i++)  n++;
+/**********found**********/
+   if(n%2==0) k=n-___1___ ;
+   else       k=n-2;
+/**********found**********/
+   c=___2___ ;
+   for(i=k-2; i>=1; i=i-2)  s[i+2]=s[i];
+/**********found**********/
+   s[1]=___3___ ;
+}
+main()
+{  char  s[80]="abcdefgh";
+   printf("\nThe original string is :  %s\n",s);
+   fun(s);
+   printf("\nThe result is :  %s\n",s);
+}
+
+程序填空题（五）
+给定程序中，函数fun的功能是：把形参s所指字符串中最右边的n个字符复制到形参t所指字符数组中，形成一个新串。若s所指字符串的长度小于n，则将整个字符串复制到形参t所指字符数组中。
+例如，形参s所指的字符串为：abcdefgh，n的值为5，程序执行后t所指字符数组中的字符串应为：defgh。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+#include  <string.h>
+#define  N  80
+void fun(char  *s, int  n, char  *t)
+{ int len,i,j=0;
+  len=strlen(s);
+/**********found**********/
+  if(n>=len) strcpy(__1__);
+  else {
+/**********found**********/
+     for(i=len-n; i<=len-1; i++)  t[j++]= __2__ ;
+/**********found**********/
+     t[j]= __3__ ;
+  }
+}
+main()
+{ char  s[N],t[N]; int  n;
+  printf("Enter a string:  ");gets(s);
+  printf( "Enter n:");  scanf("%d",&n);
+  fun(s,n,t);
+  printf("The string t :  ");  puts(t);
+}
+
+程序填空题（六）
+给定程序中，函数fun的功能是：统计形参s所指的字符串中数字字符出现的次数，并存放在形参t所指的变量中，最后在主函数中输出。例如，若形参s所指的字符串为"abcdef35adgh3kjsdf7"，则输出结果为4。
+请在下划线处填入正确内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+void fun(char  *s, int  *t)
+{  int i, n;
+   n=0;
+/**********found**********/
+   for(i=0; ___1___ !=0; i++)
+/**********found**********/
+      if(s[i]>='0'&&s[i]<= ___2___ ) n++;
+/**********found**********/
+    ___3___ ;
+}
+main()
+{  char  s[80]="abcdef35adgh3kjsdf7";
+   int t;
+   printf("\nThe original string is :  %s\n",s);
+   fun(s,&t);
+   printf("\nThe result is :  %d\n",t);
+}
+
+程序填空题（七）
+函数fun的功能是：根据所给的年、月、日，计算出该日是这一年的第几天，并作为函数值返回。其中函数 isleap用来判别某一年是否为闰年。
+例如，若输入：2008  5  1，则程序输出：2008年5月1日是该年的第122天。
+请在程序的下划线处填入正确的内容，并把下划线删除，使程序得出正确的
+结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+int  isleap(int  year)
+{ int  leap;
+  leap= (year%4==0 && year%100!=0 || year%400==0);
+/**********found**********/
+  return  __1__;
+}
+int fun(int  year, int  month, int  day)
+{  int  table[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+   int  days=0 , i;
+   for(i=1; i<month; i++)
+      days=days + table[i];
+/**********found**********/
+   days=days+__2__ ;
+   if( isleap(year) && month>2 )
+ /**********found**********/
+     days=days+__3__;
+   return  days;
+}
+main()
+{  int  year, month, day, days ;
+   printf("请输入年、月、日：");
+   scanf("%d%d%d",&year, &month, &day);
+   days = fun(year, month, day); 
+   printf("%d年%d月%d日是该年的第%d天\n",year, month, day, days);
+}
+
+程序填空题（八）
+给定程序中，函数fun的功能是：利用指针数组对形参ss所指字符串数组中的字符串按由长到短的顺序排序，并输出排序结果。ss所指字符串数组中共有N个字符串，且串长小于M。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+#include  <string.h>
+#define  N  5
+#define  M  8
+void fun(char  (*ss)[M])
+{ char  *ps[N],*tp;    int  i,j,k;
+  for(i=0; i<N; i++) ps[i]=ss[i];
+  for(i=0; i<N-1; i++) {
+/**********found**********/
+    k=  __1__ ;
+    for(j=i+1; j<N; j++)
+/**********found**********/
+       if(strlen(ps[k]) < strlen(__2__) ) k=j;
+/**********found**********/
+    tp=ps[i];  ps[i]=ps[k]; ps[k]= __3__ ;
+  }
+  printf("\nThe string after sorting by length:\n\n");
+  for(i=0; i<N; i++)  puts(ps[i]);
+}
+main()
+{ char  ch[N][M]={"red","green","blue","yellow","black"};
+  int  i;
+  printf("\nThe original string\n\n");
+  for(i=0;i<N;i++)puts(ch[i]);  printf("\n");
+  fun(ch);
+}
+
+程序填空题（九）
+下列给定程序中，函数fun的功能是：将N×N矩阵主对角线元素的值与反向对角线对应位置上元素的值进行交换。
+例如，若N＝3，有下列矩阵：
+1　　2　　3
+4　　5　　6
+7　　8　　9
+交换后为：
+3　　2　　1
+4　　5　　6
+9　　8　　7
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+#define  N  4
+/**********found**********/
+void fun(int  ___1___ , int  n)
+{  int  i,s;
+/**********found**********/
+   for(___2___; i++)
+   {  s=t[i][i];
+      t[i][i]=t[i][n-i-1];
+/**********found**********/
+      t[i][n-1-i]=___3___;
+   }
+}
+main()
+{  int  t[][N]={21,12,13,24,25,16,47,38,29,11,32,54,42,21,33,10}, i, j;
+   printf("\nThe original array:\n");
+   for(i=0; i<N; i++)
+   {  for(j=0; j<N; j++)  printf("%d  ",t[i][j]);
+      printf("\n");
+   }
+   fun(t,N);
+   printf("\nThe result is:\n");
+   for(i=0; i<N; i++)
+   {  for(j=0; j<N; j++)  printf("%d  ",t[i][j]);
+      printf("\n");
+   }
+}
+
+程序填空题（十）
+下列给定程序中，函数fun的功能是：在形参ss所指字符串数组中查找与形参t所指字符串相同的串，找到后返回该串在字符串数组中的位置(即下标值)，若未找到则返回-1。ss所指字符串数组中共有N个内容不同的字符串，且串长小于M。
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include  <stdio.h>
+#include  <string.h>
+#define  N  5
+#define  M  8
+int fun(char  (*ss)[M],char  *t)
+{  int  i;
+/**********found**********/
+   for(i=0; i< __1__ ; i++)
+/**********found**********/
+     if(strcmp(ss[i],t)==0 ) return  __2__ ;
+   return -1;
+}
+main()
+{ char  ch[N][M]={"if","while","switch","int","for"},t[M];
+  int  n,i;
+  printf("\nThe original string\n");
+  for(i=0;i<N;i++)puts(ch[i]);  printf("\n");
+  printf("\nEnter a string for search:  ");  gets(t);
+  n=fun(ch,t);
+/**********found**********/
+  if(n==  __3__)  printf("\nDon't found!\n");
+  else  printf("\nThe position is  %d .\n",n);
+}
+
+程序填空题（十一）
+人员的记录由编号和出生年、月、日组成，N名人员的数据已在主函数中存入结构体数组std中。函数fun的功能是：找出指定出生年份的人员，将其数据放在形参k所指的数组中，由主函数输出，同时由函数值返回满足指定条件的人数。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+#define N 8
+typedef  struct
+{  int  num;
+   int  year,month,day ;
+}STU;
+int fun(STU  *std, STU  *k, int  year)
+{  int  i,n=0;
+   for (i=0; i<N; i++)
+/**********found**********/
+      if(  ___1___==year)
+/**********found**********/
+         k[n++]= ___2___;
+/**********found**********/
+   return (___3___);
+}
+main()
+{  STU  std[N]={ {1,1984,2,15},{2,1983,9,21},{3,1984,9,1},{4,1983,7,15},
+                 {5,1985,9,28},{6,1982,11,15},{7,1982,6,22},{8,1984,8,19}};
+   STU  k[N];         
+   int  i,n,year;
+   printf("Enter a year :  ");  scanf("%d",&year);
+   n=fun(std,k,year);
+   if(n==0)
+      printf("\nNo person was born in %d \n",year);
+   else
+   {   printf("\nThese persons were born in %d \n",year);
+       for(i=0; i<n; i++)
+         printf("%d  %d-%d-%d\n",k[i].num,k[i].year,k[i].month,k[i].day);
+   }
+}
+
+程序填空题（十二）
+给定程序中，函数fun的功能是：将形参指针所指结构体数组中的三个元素按num成员进行升序排列。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+typedef struct
+{  int  num;
+   char  name[10];
+}PERSON;
+/**********found**********/
+void fun(PERSON  ___1___)
+{
+/**********found**********/
+   ___2___  temp;
+   if(std[0].num>std[1].num)
+  {  temp=std[0];  std[0]=std[1];  std[1]=temp;  }
+   if(std[0].num>std[2].num)
+  {  temp=std[0];  std[0]=std[2];  std[2]=temp; }
+   if(std[1].num>std[2].num)
+  {  temp=std[1];  std[1]=std[2];  std[2]=temp;  }
+}
+main()
+{  PERSON  std[ ]={ 5,"Zhanghu",2,"WangLi",6,"LinMin" };
+   int  i;
+/**********found**********/
+   fun(___3___);
+   printf("\nThe result is :\n");
+   for(i=0; i<3; i++)
+      printf("%d,%s\n",std[i].num,std[i].name);
+}
+
+程序填空题（十三）
+下列给定程序中，函数fun的功能是：在带头结点的单向链表中，查找数据域中值为ch的结点。找到后通过函数值返回该结点在链表中所处的顺序号；若不存在值为ch的结点，函数返回0值。
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+#include <stdlib.h>
+#define N 8
+typedef  struct list
+{  int  data;
+   struct list  *next;
+} SLIST;
+SLIST *creatlist(char  *);
+void outlist(SLIST  *);
+int fun( SLIST  *h, char  ch)
+{  SLIST  *p;        int  n=0;
+   p=h->next;
+/**********found**********/
+   while(p!=___1___)
+   {   n++;
+/**********found**********/
+       if (p->data==ch)  return ___2___;
+       else  p=p->next;
+   }
+   return 0;
+}
+main()
+{  SLIST  *head;       int  k;      char  ch;
+   char  a[N]={'m','p','g','a','w','x','r','d'};
+   head=creatlist(a);
+   outlist(head);
+   printf("Enter a letter:");
+   scanf("%c",&ch);
+/**********found**********/
+   k=fun(___3___);
+   if (k==0)   printf("\nNot found!\n");
+   else       printf("The sequence number is :  %d\n",k);
+}
+SLIST *creatlist(char  *a)
+{  SLIST  *h,*p,*q;      int  i;
+   h=p=(SLIST *)malloc(sizeof(SLIST));
+   for(i=0; i<N; i++)
+   {  q=(SLIST *)malloc(sizeof(SLIST));
+      q->data=a[i];  p->next=q;  p=q;
+   }
+   p->next=0;
+   return  h;
+}
+void outlist(SLIST  *h)
+{  SLIST  *p;
+   p=h->next;
+   if (p==NULL)  printf("\nThe list is NULL!\n");
+  else
+  {  printf("\nHead");
+     do
+     { printf("->%c",p->data);  p=p->next;  }
+     while(p!=NULL);
+     printf("->End\n");
+  }
+}
+
+程序填空题（十四）
+给定程序中，函数fun的功能是将形参给定的字符串、整数、浮点数写到文本文件中，再用字符方式从此文本文件中逐个读入并显示在终端屏幕上。 
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：请勿改动main函数和其他函数中的任何内容，仅在函数fun的横线上填入所编写的若干表达式或语句。
+#include  <stdio.h>
+void fun(char  *s, int  a, double  f)
+{
+/**********found**********/
+  __1__ fp;
+  char  ch;
+  fp = fopen("file1.txt", "w");
+  fprintf(fp, "%s %d %f\n", s, a, f);
+  fclose(fp);
+  fp = fopen("file1.txt", "r");
+  printf("\nThe result :\n");
+  ch = fgetc(fp);
+/**********found**********/
+  while (!feof(__2__)) 
+{
+/**********found**********/
+    putchar(__3__); 
+	ch = fgetc(fp);  
+}
+    putchar('\n');
+    fclose(fp);
+}
+main()
+{ char  a[10]="Hello!";  int  b=12345;
+  double  c= 98.76;
+  fun(a,b,c);
+}
+
+程序填空题（十五）
+下列给定程序的功能是：调用函数fun将指定源文件中的内容复制到指定的目标文件中，复制成功时函数返回1，失败时返回0。在复制的过程中，把复制的内容输出到屏幕。主函数中源文件名放在变量sfname中，目标文件名放在变量tfname中。
+请在下划线处填入正确的内容并将下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+#include <stdlib.h>
+int fun(char  *source, char  *target)
+{  FILE  *fs,*ft;      char  ch;
+/**********found**********/
+   if((fs=fopen(source, ___1___))==NULL)
+      return 0;
+   if((ft=fopen(target, "w"))==NULL)
+      return 0;
+   printf("\nThe data in file :\n");
+   ch=fgetc(fs);
+/**********found**********/
+   while(!feof(___2___))
+   {  putchar( ch );
+/**********found**********/
+      fputc(ch,___3___);
+      ch=fgetc(fs);
+   }
+   fclose(fs);  fclose(ft);
+   printf("\n");
+   return  1;
+}
+main()
+{  char  sfname[20] ="myfile1",tfname[20]="myfile2";
+   FILE  *myf; int  i; char  c;
+   myf=fopen(sfname,"w");
+   printf("\nThe original data :\n");
+   for(i=1; i<30; i++){ c='A'+rand()%25;fprintf(myf,"%c",c); printf("%c",c); }
+   fclose(myf);printf("\n");
+   if (fun(sfname, tfname))  printf("Succeed!");
+   else  printf("Fail!");
+}
+
+程序填空题（十六）
+给定程序中，函数fun的功能是：调用随机函数产生20个互不相同的整数放在形参a所指数组中(此数组在主函数中已置0)。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdlib.h>
+#include <stdio.h>
+#define N 20
+void fun(int *a)
+{
+	int i, x, n=0;
+	x=rand()%20;
+/**********found**********/
+	while (n<__1__)
+	{  for(i=0; i<n; i++ )
+/**********found**********/
+         if( x==a[i] ) 
+		    __2__;
+/**********found**********/
+     if( i==__3__)
+	 {a[n]=x; n++; }
+	 x=rand()%20;
+	}
+}
+main()
+{
+	int  x[N]={0} ,i;
+	fun( x );
+	printf("The result :  \n");
+	for( i=0; i<N; i++ )
+	{
+		printf("%4d",x[i]);
+		if((i+1)%5==0)printf("\n");
+	}
+  printf("\n");
+}
+
+程序填空题（十七）
+给定程序的主函数中，已给出由结构体构成的链表结点a、b、c，各结点的数据域中均存入字符，函数fun()的作用是：将a、b、c三个结点链接成一个单向链表，并输出链表结点中的数据。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+typedef struct list
+{  char data;
+   struct list *next;
+} Q;
+void fun( Q *pa, Q *pb, Q *pc)
+{  Q  *p;
+/**********found**********/
+   pa->next=___1___;
+   pb->next=pc;
+   p=pa;
+   while( p )
+   {
+/**********found**********/
+      printf("  %c",____2_____);
+/**********found**********/
+      p=____3____;
+   }
+   printf("\n");
+}
+main()
+{  Q  a, b, c;
+   a.data='E';  b.data='F';  c.data='G';  c.next=NULL;
+   fun( &a, &b, &c );
+}
+
+程序填空题（十八）
+程序通过定义学生结构体变量，存储了学生的学号、姓名和三门课的成绩。所有学生数据均以二进制方式输出到文件中。函数fun的功能是从形参filename所指的文件中读入学生数据，并按照学号从小到大排序后，再用二进制方式把排序后的学生数据输出到filename所指的文件中，覆盖原来的文件内容。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+#define N 5
+typedef struct student {
+  long  sno;
+  char  name[10];
+  float  score[3];} STU;
+void fun(char *filename)
+{ 
+	FILE *fp; int i, j;
+	STU  s[N], t;
+/**********found**********/
+	fp=fopen(filename, __1__);
+	fread(s,sizeof(STU),N,fp);
+	fclose(fp);
+	for (i=0; i<N-1; i++)
+	  for (j=i+1; j<N; j++)
+		if (s[i].sno __2__ s[j].sno)
+		{
+			t = s[i];  s[i] = s[j];  s[j] = t;  
+		}
+			fp=fopen(filename,"wb");
+/**********found**********/
+	  __3__(s, sizeof(STU), N, fp);
+	  fclose(fp);
+}
+main()
+{ STU t[N]={ {10005,"ZhangSan", 95, 80, 88}, {10003,"LiSi", 85, 70, 78},{10002,"CaoKai", 75, 60, 88}, {10004,"FangFang", 90, 82, 87},{10001,"MaChao", 91, 92, 77}}, ss[N];
+  int  i,j;  FILE  *fp;
+  fp = fopen("student.dat", "wb");
+  fwrite(t, sizeof(STU), 5, fp);
+  fclose(fp);
+  printf("\nThe original data :\n");
+  for (j=0; j<N; j++)
+  {  printf("\nNo: %ld  Name: %-8s      Scores:  ",t[j].sno, t[j].name);
+     for (i=0; i<3; i++)  printf("%6.2f ", t[j].score[i]);
+     printf("\n");
+  }
+  fun("student.dat");
+  printf("\nThe data after sorting :\n");
+  fp = fopen("student.dat", "rb");
+  fread(ss, sizeof(STU), 5, fp);
+  fclose(fp);
+  for (j=0; j<N; j++)
+  {  printf("\nNo: %ld  Name: %-8s      Scores:  ",ss[j].sno, ss[j].name);
+    for (i=0; i<3; i++)  printf("%6.2f ", ss[j].score[i]);
+    printf("\n");
+  }
+}
+
+程序填空题（十九）
+函数fun的功能是：在有n个元素的结构体数组std中，查找有不及格科目的学生，找到后输出学生的学号；函数的返回值是有不及格科目的学生人数。
+例如，主函数中给出了4名学生的数据，则程序运行的结果为：
+学号：N1002  学号：N1006
+共有2位学生有不及格科目
+请在程序的下划线处填入正确的内容，并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+typedef struct
+{ char num[8];  
+  double score[2];
+/**********found**********/
+} __(1)__ ;
+int fun(STU std[ ], int n)
+{  int i, k=0;
+   for(i=0; i<n; i++)
+/**********found**********/
+     if( std[i].score[0]<60__(2)__std[i].score[1]<60 ) 
+     { k++;printf("学号：%s ",std[i].num);}
+/**********found**********/
+   return __(3)__ ;
+}
+main()
+{  STU std[4]={ "N1001", 76.5,82.0 ,"N1002", 53.5,73.0, 
+                "N1005", 80.5,66.0,"N1006", 81.0,56.0 };
+  printf( "\n共有%d位学生有不及格科目\n" , fun(std,4) );
+}
+
+
+程序填空题（二十）
+用筛选法可得到2～n(n＜10000)之间的所有素数，方法是：首先从素数2开始，将所有2的倍数的数从数表中删去(把数表中相应位置的值置成0)；接着从数表中找下一个非0数，并从数表中删去该数的所有倍数；依此类推，直到所找的下一个数等于n为止。这样会得到一个序列：2,3,5,7,11,13,17,19,23，…
+函数fun的作用是：用筛选法找出所有小于等于n的素数，并统计素数的个数作为函数值返回。
+请在程序的下划线处填入正确的内容并把下划线删除，使程序得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+int fun(int n)
+{  int a[10000], i,j, count=0;
+   for (i=2; i<=n; i++)  a[i] = i;
+   i = 2;
+   while (i<n)
+   {
+/**********found**********/
+      for (j=a[i]*2; j<=n; j+=___1___)
+         a[j] = 0;
+	  i++;
+/**********found**********/
+      while (___2___==0)
+         i++;
+   }
+   printf("\nThe prime number between 2 to %d\n", n);
+   for (i=2; i<=n; i++)
+/**********found**********/
+     if (a[i]!=___3___)
+	 {  count++;
+	    printf( count%15?"%5d":"\n%5d",a[i]);  
+	 }
+	 return  count;
+}
+main()
+{  int  n=20, r;
+   r = fun(n);
+   printf("\nThe number of prime is  :  %d\n", r);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

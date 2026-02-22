@@ -1,0 +1,42 @@
+# 编译输出文件
+*.exe
+*.out
+*.app
+
+# 目标文件/中间文件
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# 可执行文件（针对特定名称）
+main.exe
+test.exe
+a.out
+
+# 编译生成的依赖文件
+*.d
+*.P
+
+# 编译缓存目录
+build/
+bin/
+Debug/
+Release/
+x64/
+x86/
+
+# 编辑器/IDE生成的文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 项目特定文件（根据实际情况调整）
+# 如果想保留项目根目录下的exe，可以指定例外
+!example.exe

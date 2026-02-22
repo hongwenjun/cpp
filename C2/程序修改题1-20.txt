@@ -1,0 +1,630 @@
+程序修改题（一）
+给定程序MODI1.C中规定输入的字符串全部为字母，fun函数的功能是：统计a所指字符串中每个字母在字符串中出现的次数（统计时不区分大小写），并将出现次数最高的字母输出（如果有多个相同，输出一个即可）。
+例如对于字符串：dadbcdbabdb，对应的输出应为：b或d。
+请改正函数fun中指定部位的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构。
+#include<stdio.h>
+#include  <stdio.h>
+#include  <string.h>
+void fun(char  a[])
+{  int  b[26], i, n,max;
+   for (i=0; i<26; i++)
+/**********found**********/
+      a[i] = 0;
+   n= strlen(a);
+   for (i=0; i<n; i++)
+      if (a[i] >='a' && a[i]<='z')
+/**********found**********/
+         b[a[i] - 'A']++;
+      else  if (a[i] >='A' && a[i]<='Z')
+         b[a[i] -'A']++;
+   max = 0;
+   for (i=1; i<26; i++)
+/**********found**********/
+     if (b[max] > b[i])
+       max=i;
+   printf("出现次数最多的字符是 :  %c\n", max + 'a');
+}
+main( )
+{  char  a[200];
+   printf("请输入一个待统计的字符串 :   ");   scanf("%s", a);
+   fun(a);
+}
+
+程序修改题（二）
+    在主函数中从键盘输入若干个数放入数组中，用0结束输入并放在最后一个元素中。下列给定程序中函数fun的功能是：计算数组元素中所有值为正数的平均值(不包括0)。
+    例如：数组中元素中的值依次为：39，－47,21,2，－8,15,0，则程序的运行结果为19.250000。
+    请改正程序中的错误，使它能得出正确的结果。
+    注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+double fun ( int x[])
+{
+/************found************/
+  int sum = 0.0;
+  int c=0, i=0;
+  while (x[i] != 0)
+  { if (x[i] > 0) {
+       sum += x[i]; c++; }
+    i++;
+  }
+/************found************/
+  sum \= c;
+  return sum;
+}
+main( )
+{  int x[1000];  int i=0;
+   printf( "\nPlease enter some data (end with 0): " );
+   do
+     {  scanf("%d", &x[i]);  }
+   while (x[i++] != 0);
+   printf("%f\n", fun ( x ));
+}
+
+程序修改题（三）
+下列给定程序中，函数fun的功能是：找出一个大于给定整数m且紧随m的素数，并作为函数值返回。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+#include  <stdlib.h>
+#include  <conio.h>
+#include  <stdio.h>
+int fun( int m)
+{ int i,k;
+  for (i=m+1; ;i++)
+     { for (k=2;k<i;k++)
+/*************found**************/
+          if (i%k!=0)
+           break;
+/*************found**************/
+        if (k<i)
+         return(i);
+     }
+}
+void main()
+{  int n;
+   system("CLS");
+   printf("\nPlease enter n: ");
+   scanf("%d",&n);
+   printf ("%d\n",fun(n));
+}
+
+程序修改题（四）
+下列给定程序中函数fun的功能是：将长整型数中各位上为偶数的数依次取出，构成一个新数放在t中。高位仍在高位，低位仍在低位。
+例如，当s中的数为87653142时，t中的数：8642。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+void fun (long  s, long *t)
+{ int   d;
+  long  sl=1;
+    *t = 0;
+    while ( s > 0)
+    {  d = s%10;
+/************found************/
+       if (d%2=0)
+       {  *t=d* sl+ *t;
+          sl *= 10;
+       }
+/************found************/
+       s \= 10;
+    }
+}
+main()
+{  long s,t;
+   printf("\nPlease enter s:"); scanf("%ld", &s);
+   fun(s, &t);
+   printf("The result is: %ld\n", t);
+}
+
+程序修改题（五）
+下列给定程序的功能是：读入一个整数k(2≤k≤10000)，输出它的所有质因子(即所有为素数的因子)。例如，若输入整数2310，则应输出：2,3,5,7,11。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+#include  <conio.h>
+#include  <stdio.h>
+/*************found**************/
+IsPrime(int n);
+{ 
+  int i,m;
+  m=1;
+  for(i=2;i<n;i++)
+ /*************found**************/
+     	if!(n%i)
+	{
+		m=0;
+		break;
+	}
+
+  return(m);
+}
+main()
+{ 
+  int j,k;
+  printf("\nPlease enter an interger number between 2 and 10000: ");
+  scanf("%d",&k);
+  printf("\nThe prime factor(s) of %d is(are): ",k);
+  for(j=2;j<k;j++)
+ 	if((!(k%j)) && (IsPrime(j)))
+		printf("%4d,",j);
+  printf("\n");
+}
+
+程序修改题（六）
+下列给定程序中,函数fun的功能是：从s所指字符串中,找出t所指字符串的个数作为函数值返回。例如,当s所指字符串中的内容为“abcdabfab”,t所指字符串的内容为“ab”,则函数返回整数3。
+请改正程序中的错误,使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构。
+#include  <stdlib.h>
+#include  <conio.h>
+#include  <stdio.h>
+#include  <string.h>
+int fun (char  *s,  char  *t)
+{int  n;  char *p, *r;
+ n=0;
+ while(*s)
+   {p=s;
+    r=t;
+    while (*r)
+/*************found**************/
+      if(*r==*p)  {r++; p++}
+       else  break;
+/*************found**************/
+       if(r=='\0')
+         n++;
+       s++;
+   }
+ return n;
+}
+void main( )
+{char  s[100],  t[100];  int  m;
+ system("CLS");
+ printf("\nPlease enter string s: ");
+ scanf("%s",s);
+ printf("\nPlease enter substring t: ");
+ scanf ("%s",t);
+ m=fun(s,t);
+ printf("\nThe result is: m=%d\n", m);
+}
+
+程序修改题（七）
+下列给定程序中函数fun的功能是：计算函数F(x,y,z)＝(x＋y)/(x－y)＋(z＋y)/(z－y)的值。其中x和y的值不相等，z和y的值不相等。
+例如，当x的值为9，y的值为11，z的值为15时，函数值为-3.50。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构。
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+/************found************/
+#define FU(m,n) ((m/n))
+float fun(float a,float b,float c)
+{  float  value;
+   value=FU(a+b,a-b)+FU(c+b,c-b);
+/************found************/
+   Return(Value);
+}
+main()
+{  float  x,y,z,sum;
+   printf("Input  x  y  z:  ");
+   scanf("%f%f%f",&x,&y,&z);
+   printf("x=%f,y=%f,z=%f\n",x,y,z);
+   if (x==y||y==z){printf("Data error!\n");exit(0);}
+   sum=fun(x,y,z);
+   printf("The result is : %5.2f\n",sum);
+}
+
+程序修改题（八）
+下列给定程序中函数fun的功能是：从整数10到55之间，查找能被3整除且有一位上的数值是5的数，把这些数放在b所指的数组中，这些数的个数作为函数值返回。规定函数中al放个位数，a2放十位数。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不得增行或删行，也不得更改的程序的结构！
+#include <stdio.h>
+int fun( int  *b )
+{  int   k,a1,a2,i=0;
+   for(k=10; k<=55; k++) {
+/************found************/
+      a2=k/1O;
+      a1=k-a2*10;
+      if((k%3==0 && a2==5)||(k%3==0 && a1==5))
+      {  b[i]=k; i++; }
+   }
+/************found************/
+   return  k;
+ }
+main( )
+{  int  a[100],k,m;
+   m=fun( a );
+   printf("The result is :\n");
+   for(k=0; k<m; k++) printf("%4d",a[k]);  printf("\n");
+}
+
+程序修改题（九）
+下列给定程序中，函数fun的功能是：读入一个字符串(长度＜20)，将该字符串中的所有字符按ASCII码值升序排序后输出。例如，若输入"edcba"，则应输出"abcde"。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+#include  <string.h>
+#include  <stdio.h>
+void fun(char  t[])
+{
+ char c;
+ int i,j;
+ /*************found**************/
+ for(i=strlen(t);i;i--)
+     for(j=0;j<i;j++)
+        /*************found**************/
+	  if(t[j]<t[j+1])
+          {
+           c= t[j];
+           t[j]=t[j+1];
+           t[j+1]=c;
+          }
+}
+main()
+{
+ char  s[81];
+ printf("\nPlease  enter a character string :");
+ gets(s);
+ printf("\nBefore sorting : %s\n",s);
+ fun(s);
+ printf("\nAfter sorting decendingly: %s\n",s);
+}
+
+程序修改题（十）
+下列给定程序中函数fun的功能是：删除指针p所指字符串中的所有空白字符(包括制表符、回车符及换行符)。
+输入字符串时用'#'结束输入。
+请改正程序中的错误，使它能输出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+#include <string.h>
+#include <stdio.h>
+#include <ctype.h>
+fun ( char *p)
+{  int i,t;  char c[80];
+/************found************/
+   For (i = 0,t = 0; p[i] ; i++)
+      if(!isspace(*(p+i))) c[t++]=p[i];
+/************found************/
+   c[t]="\0";
+   strcpy(p,c);
+}
+
+main( )
+{  char c,s[80];
+   int i=0;
+   printf("Input a string:");
+   c=getchar();
+   while(c!='#')
+   {  s[i]=c;i++;c=getchar(); }
+   s[i]='\0';
+   fun(s);
+   puts(s);
+}
+
+程序修改题（十一）
+下列给定程序中函数fun的功能是：将m(1≤m≤10)个字符串连接起来，组成一个新串，放入pt所指存储区中。例如：把三个串"abc"、"CD"、"EF"连接起来，结果是"abcCDEF"。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+#include <stdio.h>
+#include <string.h>
+void  fun ( char  str[][10], int  m, char  *pt )
+{
+/************found************/
+    Int  k, q, i ;
+    for ( k = 0; k < m; k++ )
+    {  q = strlen ( str [k] );
+       for (i=0; i<q; i++)
+/************found************/
+       pt[i] = str[k,i] ;
+       pt += q ;
+       pt[0] = 0 ;
+    }
+}
+
+main( )
+{    int  m, h ;
+     char s[10][10], p[120] ;
+     printf( "\nPlease enter  m:" ) ;
+     scanf("%d", &m) ;  gets(s[0]) ;
+     printf( "\nPlease enter  %d string:\n", m ) ;
+     for ( h = 0; h < m; h++ ) gets( s[h]) ;
+     fun(s, m, p) ;
+     printf( "\nThe result  is :  %s\n", p) ;
+}
+
+程序修改题（十二）
+下列给定程序中，函数fun的功能是：依次取出字符串中所有的数字字符，形成新的字符串，并取代原字符串。
+请改正函数fun中的错误，使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构。
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+void fun(char *s)
+{int i,j;
+ for(i=0,j=0; s[i]!= '\0'; i++)
+     if(s[i]>= '0'&&s[i]<= '9')
+/*************found**************/
+        s[j]=s[i];
+/*************found**************/
+     s[j]=”\0”;
+}
+void main()
+{char item[80];
+ system("CLS");
+ printf("\nEnter a string: ");gets(item);
+ printf("\nThe string is:%s\n",item);
+ fun(item);
+ printf("\nThe string of changing is :%s\n",item);
+}
+
+程序修改题（十三）
+由N个有序整数组成的数列已放在一维数组中，下列给定程序中函数fun的功能是：利用折半查找法查找整数m在数组中的位置。若找到，返回其下标值；否则，返回-1。
+折半查找的基本算法是：每次查找前先确定数组中待查的范围low和high(low<high)，然后用m与中间位置(mid)上元素的值进行比较。如果m的值大于中间位置元素的值，则下一次的查找范围落在中间位置之后的元素中；反之，下一次的查找范围落在中间位置之前的元素中。直到low>high，查找结束。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构。
+#include <stdio.h>
+#define  N  10
+/************found************/
+void fun(int  a[], int  m )
+{  int  low=0,high=N-1,mid;
+   while(low<=high)
+   {  mid=(low+high)/2;
+      if(m<a[mid])
+        high=mid-1;
+/************found************/
+      else If(m > a[mid])
+        low=mid+1;
+      else  return(mid);
+   }
+   return(-1);
+}
+main()
+{  int  i,a[N]={-3,4,7,9,13,45,67,89,100,180 },k,m;
+   
+   printf("a数组中的数据如下:");
+   for(i=0;i<N;i++) printf("%d ", a[i]);
+   printf("Enter m: ");  scanf("%d",&m);
+   k=fun(a,m);
+   if(k>=0) printf("m=%d,index=%d\n",m,k);
+   else  printf("Not be found!\n");
+}
+
+程序修改题（十四）
+下列给定程序中，函数fun的功能是：对N名学生的学习成绩，按从高到低的顺序找出前m(m≤10)名学生来，并将这些学生的数据存放在一个动态分配的连续存储区中，此存储区的首地址作为函数值返回。
+请改正程序中的错误,使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构。
+#include  <stdlib.h>
+#include  <conio.h>
+#include  <string.h>
+#include  <stdio.h>
+#include  <malloc.h>
+#define N 10
+typedef struct ss
+   { char num[10];
+     int s;
+   } STU;
+STU *fun(STU a[], int m)
+{ STU b[N],*t;
+  int i, j,k;
+/*************found**************/
+  *t=calloc(m,sizeof(STU));
+  for(i=0;i<N;i++) b[i]=a[i];
+  for(k=0;k<m;k++)
+     { for (i=j=0;i<N;i++)
+          if(b[i].s>b[j].s) j=i;
+/*************found**************/
+      t[k].num=b[j].num;
+      t[k].s=b[j].s;
+      b[j].s=0;
+     }
+return t;
+}
+outresult(STU a[],FILE *pf)
+{ int i;
+  for(i=0;i<N;i++)
+     fprintf(pf, "No=%s Mark=%d\n ",a[i].num, a[i].s);
+  fprintf(pf, "\n\n ");
+}
+void main()
+{ STU a[N]={{ "A01 ",81},{ "A02 ",89},{ "A03 ",66},{ "A04 ",87},{ "A05 ",77},
+			{ "A06 ",90},{ "A07 ",79},{ "A08 ",61},{ "A09 ",80},{ "A10 ",71}};
+  STU *pOrder;
+  int i, m;
+  system("CLS");
+  printf("*****THE RESULT*****\n");
+  outresult(a,stdout);
+  printf("\nGive the number of the students who have better score: ");
+  scanf("%d",&m);
+  while(m>10)
+      { printf("\nGive the number of the students who have better score: ");
+  scanf("%d",&m);
+}
+  pOrder=fun(a,m);
+  printf("***** THE RESULT*****\n");
+  printf("The top :\n");
+  for(i=0;i<m;i++)
+     printf("%s  %d\n",pOrder[i].num, pOrder[i].s);
+  free(pOrder);
+}
+
+程序修改题（十五）
+给定程序MODI1.C中，函数fun的功能是：在有n名学生，2门课成绩的结构体数组std中，计算出第1门课程的平均分，作为函数值返回。例如，主函数中给出了4名学生的数据，则程序运行的结果为：第1门课程的平均分是：76.125000
+请改正函数fun中指定部位的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构。
+#include  <stdio.h>
+typedef  struct
+{  char  num[8];
+  double  score[2];
+}STU ;
+double fun(STU  std[], int  n)
+{  int   i;
+/**********found**********/
+   double  sum ;
+/**********found**********/
+   for(i=0; i<2 ; i++)
+/**********found**********/
+      sum += std[i].score[1]; 
+   return  sum/n;
+}
+main()
+{  STU  std[ ]={ "N1001", 76.5,82.0 ,"N1002", 66.5,73.0, 
+              "N1005", 80.5,66.0,"N1006", 81.0,56.0 };
+   printf("第1门课程的平均分是：%lf\n", fun(std,4) );
+}
+
+程序修改题（十六）
+下列给定程序中函数fun的功能是：输出M×M整数方阵,然后求两条对角线上元素之和,并作为函数值返回。
+请改正程序中的错误,使它能得出正确的结果。
+注意：不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+#define M 5
+/************found************/
+int fun(int n, int xx[][])
+{  int  i, j, sum=0;
+  printf( "\nThe %d x %d matrix:\n", M, M );
+  for(i = 0; i < M; i++)
+  {  for(j = 0; j < M; j++)
+/************found************/
+      printf("%f ", xx[i][j]);
+    printf("\n");
+  }
+  for(i = 0 ; i < n ; i++)
+    sum += xx[i][i]+xx[i][ n-i-1 ];
+  return( sum );
+}
+main( )
+{  int aa[M][M]={{1,2,3,4,5},{4,3,2,1,0},
+   {6,7,8,9,0},{9,8,7,6,5},{3,4,5,6,7}};
+   printf("\nThe sum of all elements on 2 diagnals is %d.",fun(M, aa));
+}
+
+程序修改题（十七）
+下列给定程序中，函数fun的功能是：计算整数n的阶乘。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构。
+试题程序：
+#include <stdlib.h>
+#include <stdio.h>
+double fun(int n)
+{
+	double result=1.0;
+	while(n>1 && n<170) 
+/*************found**************/
+      Result *=--n;
+/*************found**************/
+	return;
+}
+void main()
+{
+	int n;
+	printf("Enter an integer: ");
+	scanf("%d",&n);
+	printf("\n%d!=%1g\n ",n,fun(n));
+}
+
+程序修改题（十八）
+下列给定程序中，函数fun的功能是：根据输入的三个边长(整型值)，判断能否构成三角形。若能构成等边三角形，则返回3；若是等腰三角形，则返回2；若能构成三角形则返回1；若不能，则返回0。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+#include <math.h>
+int fun(int a,int b,int c)
+{ if(a+b>c&&b+c>a&&a+c>b)
+     {if(a==b && b==c) 
+/*************found**************/
+       return 1;
+      else if(a==b||b==c||a==c)
+       return 2;
+/*************found**************/
+      else return 3;
+     }
+  else return 0;
+}
+void main()
+{ 
+	int a,b,c,shape;
+    printf("\nInput a,b,c: "); 
+    scanf("%d%d%d",&a,&b,&c);
+    printf("\na=%d, b=%d, c=%d\n",a,b,c);
+    shape=fun(a,b,c);
+    printf("\nThe shape :%d\n",shape);
+}
+
+程序修改题（十九）
+下列给定的程序中，函数fun的功能是：计算并输出k以内最大的10个能被13或17整除的自然数之和。k的值由主函数传入，若k的值为500，则函数的值为4622。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+int fun(int k)
+{ int m=0,mc=0, j;
+  while((k>=2) && (mc<10))
+  {
+/*************found**************/
+	  if((k%13=0)||(k%17=0))
+	  { m=m+k;mc++; }
+      k--;
+/*************found**************/
+	  return m;
+}
+void main()
+{
+	printf("%d\n ",fun(500));
+}
+
+程序修改题（二十）
+给定程序中函数fun的功能是：首先把b所指字符串中的字符按逆序存放，然后将a所指字符串中的字符和b所指字符串中的字符，按排列的顺序交叉合并到c所指数组中，过长的剩余字符接在c所指的数组的尾部。
+例如，当a所指字符串中的内容为"abcdefg"，b所指字符串中的内容为"1234"时，c所指数组中的内容应为"a4b3c2d1efg"；而当a所指字符串中的内容为"1234"，b所指字符串的内容为"abcdefg"时，c所指数组中的内容应该为"1g2f3e4dcba"。
+请改正程序中的错误，使它能得出正确的结果。
+注意：不要改动main函数，不得增行或删行，也不得更改程序的结构！
+试题程序：
+#include <stdio.h>
+#include <string.h>
+void fun(char *a,char *b,char *c)
+{
+	int i,j;char ch;
+	i=0; j=strlen(b)-1;
+/************found************/
+	while(i > j)
+	{
+		ch=b[i]; b[i]=b[j]; b[j]=ch;
+		i++; j--;
+	}
+	while ( *a || *b ) 
+	{
+/************found************/
+	 If ( *a )
+	 { *c = *a;  c++; a++; }
+	 if ( *b )
+	 { *c = *b;  c++; b++; }
+	}
+	*c = 0;
+}
+main()
+{
+   char s1[100],s2[100],t[200];
+   printf("\nEnter s1 string : ");
+   scanf("%s",s1);
+   printf("\nEnter s2 string : ");
+   scanf("%s",s2);
+   fun( s1, s2, t );
+   printf("\nThe result is : %s\n",t);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
